@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+﻿import React, { useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
@@ -73,4 +73,3 @@ export default function MouseTracker3D({ color = '#818cf8', size = 0.15 }) {
 
 // minor tweak for clarity
 
-// minor tweak for clarity
