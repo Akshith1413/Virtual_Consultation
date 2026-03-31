@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Premium typography */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Color scheme */
+  color-scheme: light dark;
+
+  /* 3D-themed color palette */
+  --color-primary: #6366f1;
+  --color-primary-light: #818cf8;
+  --color-primary-dark: #4f46e5;
+  --color-accent: #c084fc;
+  --color-accent-pink: #f472b6;
+  --color-success: #22c55e;
+  --color-warning: #eab308;
+  --color-danger: #ef4444;
+  --color-surface: #ffffff;
+  --color-surface-dark: #0f172a;
+  --color-text: #1e293b;
+  --color-text-dark: #e2e8f0;
+
+  /* Rendering quality */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode surface */
+.dark {
+  --color-surface: #0f172a;
+  --color-text: #e2e8f0;
+}
+
+/* Heading font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Link styles */
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--color-primary-light);
+}
+
+/* Canvas overlay utilities */
+.canvas-overlay {
+  position: relative;
+  z-index: 10;
+}
+
+.canvas-behind {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* 3D widget container */
+.widget-3d {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-surface-dark), #1e1b4b);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #e2e8f0;
+}
+
+/* Responsive 3D canvas scaling */
+@media (max-width: 768px) {
+  .widget-3d {
+    min-height: 200px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+ 
+ 
+ 
