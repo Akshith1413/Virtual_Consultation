@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 
 const TESTIMONIALS = [
   {
@@ -18,7 +18,7 @@ const TESTIMONIALS = [
   {
     name: "Priya Kapoor",
     role: "HR Specialist",
-    text: "From meal plans to virtual doctor consults — I feel in control of my wellness for the first time.",
+    text: "From meal plans to virtual doctor consults â€” I feel in control of my wellness for the first time.",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     rating: 4,
   },
@@ -34,10 +34,10 @@ export default function TestimonialsSection() {
       
       {/* Floating testimonial quotes for dark mode */}
       <div className="absolute inset-0 hidden dark:block opacity-5">
-        <div className="absolute top-20 left-10 text-6xl text-indigo-400/20">â</div>
-        <div className="absolute bottom-40 right-12 text-6xl text-indigo-400/20">âž</div>
-        <div className="absolute top-1/3 right-20 text-6xl text-indigo-400/20">â</div>
-        <div className="absolute bottom-1/4 left-16 text-6xl text-indigo-400/20">âž</div>
+        <div className="absolute top-20 left-10 text-6xl text-indigo-400/20">Ã¢ÂÂ</div>
+        <div className="absolute bottom-40 right-12 text-6xl text-indigo-400/20">Ã¢ÂÅ¾</div>
+        <div className="absolute top-1/3 right-20 text-6xl text-indigo-400/20">Ã¢ÂÂ</div>
+        <div className="absolute bottom-1/4 left-16 text-6xl text-indigo-400/20">Ã¢ÂÅ¾</div>
       </div>
       
       <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -78,17 +78,17 @@ export default function TestimonialsSection() {
                 </div>
 
                 <p className="text-gray-700 dark:text-gray-300 italic mb-4 relative">
-                  <span className="absolute -top-4 -left-2 text-medium text-blue-400">â </span>
+                  <span className="absolute -top-4 -left-2 text-medium text-blue-400">Ã¢ÂÂ </span>
                   {t.text}
-                  <span className="absolute -bottom-3 -right-2 text-2xl text-blue-400">âž</span>
+                  <span className="absolute -bottom-3 -right-2 text-2xl text-blue-400">Ã¢ÂÅ¾</span>
                 </p>
 
                 <div className="flex justify-center">
                   {Array.from({ length: t.rating }).map((_, i) => (
-                    <span key={i} className="text-blue-400 dark:text-blue-300">★</span>
+                    <span key={i} className="text-blue-400 dark:text-blue-300">â˜…</span>
                   ))}
                   {Array.from({ length: 5 - t.rating }).map((_, i) => (
-                    <span key={i} className="text-gray-300 dark:text-gray-600">★</span>
+                    <span key={i} className="text-gray-300 dark:text-gray-600">â˜…</span>
                   ))}
                 </div>
               </div>
@@ -111,7 +111,6 @@ export default function TestimonialsSection() {
     </section>
   );
 }
- 
  
  
  
