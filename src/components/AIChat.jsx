@@ -1,15 +1,15 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+﻿import { useState, useRef, useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 import { sendChatMessage } from '../services/aiService';
 import '../styles/AIChat.css';
 
 const QUICK_ACTIONS = [
-  { label: '🔍 Check symptoms', prompt: 'I want to check my symptoms' },
-  { label: '🥗 Diet advice', prompt: 'Give me personalized diet advice' },
-  { label: '😴 Sleep tips', prompt: 'How can I improve my sleep?' },
-  { label: '💊 Supplements', prompt: 'What supplements should I consider?' },
-  { label: '🧠 Stress help', prompt: 'I need help managing stress' },
-  { label: '🏋️ Exercise', prompt: 'Recommend an exercise routine for me' },
+  { label: 'ðŸ” Check symptoms', prompt: 'I want to check my symptoms' },
+  { label: 'ðŸ¥— Diet advice', prompt: 'Give me personalized diet advice' },
+  { label: 'ðŸ˜´ Sleep tips', prompt: 'How can I improve my sleep?' },
+  { label: 'ðŸ’Š Supplements', prompt: 'What supplements should I consider?' },
+  { label: 'ðŸ§  Stress help', prompt: 'I need help managing stress' },
+  { label: 'ðŸ‹ï¸ Exercise', prompt: 'Recommend an exercise routine for me' },
 ];
 
 export default function AIChat() {
@@ -51,7 +51,7 @@ export default function AIChat() {
         if (line.trim() === '---') return '<hr/>';
         // List items
         if (line.trim().startsWith('- ')) {
-          return `<div style="padding-left:12px">• ${line.trim().slice(2)}</div>`;
+          return `<div style="padding-left:12px">â€¢ ${line.trim().slice(2)}</div>`;
         }
         if (/^\d+\.\s/.test(line.trim())) {
           return `<div style="padding-left:12px">${line.trim()}</div>`;
@@ -59,7 +59,7 @@ export default function AIChat() {
         // Headers
         if (line.trim().startsWith('### ')) return `<div style="font-weight:600;color:#c7d2fe;margin-top:6px">${line.trim().slice(4)}</div>`;
         if (line.trim().startsWith('## ')) return `<div style="font-weight:600;color:#c7d2fe;margin-top:6px">${line.trim().slice(3)}</div>`;
-        // Emoji headers (like "🥗 **Nutrition Tips:**")
+        // Emoji headers (like "ðŸ¥— **Nutrition Tips:**")
         return line || '<br/>';
       })
       .join('\n');
@@ -88,7 +88,7 @@ export default function AIChat() {
       console.error('Chat error:', err);
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: '⚠️ Sorry, I\'m temporarily unavailable. Please try again in a moment.\n\n*If this persists, the AI service may be starting up.*',
+        content: 'âš ï¸ Sorry, I\'m temporarily unavailable. Please try again in a moment.\n\n*If this persists, the AI service may be starting up.*',
         time: new Date()
       }]);
     } finally {
@@ -149,10 +149,10 @@ export default function AIChat() {
           {/* Header */}
           <div className="ai-chat-header">
             <div className="ai-chat-header-left">
-              <div className="ai-chat-avatar">🧠</div>
+              <div className="ai-chat-avatar">ðŸ§ </div>
               <div className="ai-chat-header-info">
                 <h3>AI Health Assistant</h3>
-                <span>Online — Ready to help</span>
+                <span>Online â€” Ready to help</span>
               </div>
             </div>
             <div className="ai-chat-header-actions">
@@ -160,9 +160,9 @@ export default function AIChat() {
                 onClick={() => { setMessages([]); setSessionId(null); }}
                 title="Clear chat"
               >
-                🗑️
+                ðŸ—‘ï¸
               </button>
-              <button onClick={() => setIsOpen(false)} title="Close">✕</button>
+              <button onClick={() => setIsOpen(false)} title="Close">âœ•</button>
             </div>
           </div>
 
@@ -170,7 +170,7 @@ export default function AIChat() {
           <div className="ai-chat-messages">
             {messages.length === 0 ? (
               <div className="ai-welcome">
-                <div className="ai-welcome-icon">🧠</div>
+                <div className="ai-welcome-icon">ðŸ§ </div>
                 <h4>AI Health Assistant</h4>
                 <p>Ask me anything about health, symptoms, nutrition, sleep, exercise, or mental wellness. I use your health profile for personalized advice.</p>
               </div>
@@ -178,7 +178,7 @@ export default function AIChat() {
               messages.map((msg, i) => (
                 <div key={i} className={`ai-msg ${msg.role}`}>
                   <div className="ai-msg-avatar">
-                    {msg.role === 'assistant' ? '🧠' : '👤'}
+                    {msg.role === 'assistant' ? 'ðŸ§ ' : 'ðŸ‘¤'}
                   </div>
                   <div>
                     <div
@@ -193,7 +193,7 @@ export default function AIChat() {
 
             {loading && (
               <div className="ai-msg assistant">
-                <div className="ai-msg-avatar">🧠</div>
+                <div className="ai-msg-avatar">ðŸ§ </div>
                 <div className="ai-typing-dots">
                   <span /><span /><span />
                 </div>
@@ -247,7 +247,6 @@ export default function AIChat() {
     </>
   );
 }
- 
  
  
  
