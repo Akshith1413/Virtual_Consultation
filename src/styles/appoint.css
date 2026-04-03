@@ -1,0 +1,224 @@
+﻿/* Appointment Scheduler Styles */
+.appointment-scheduler-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #374151;
+  transition: all 0.2s;
+}
+
+.dark .appointment-scheduler-input {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.appointment-scheduler-input:focus {
+  outline: none;
+  ring-width: 2px;
+  ring-color: #3b82f6;
+  border-color: transparent;
+}
+
+.appointment-scheduler-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #374151;
+  resize: vertical;
+  transition: all 0.2s;
+}
+
+.dark .appointment-scheduler-textarea {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.appointment-scheduler-textarea:focus {
+  outline: none;
+  ring-width: 2px;
+  ring-color: #3b82f6;
+  border-color: transparent;
+}
+
+.appointment-scheduler-select-wrapper {
+  position: relative;
+}
+
+.appointment-scheduler-select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #6b7280;
+  pointer-events: none;
+}
+
+.dark .appointment-scheduler-select-wrapper::after {
+  border-top-color: #9ca3af;
+}
+
+.appointment-scheduler-select {
+  width: 100%;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #374151;
+  appearance: none;
+  transition: all 0.2s;
+}
+
+.dark .appointment-scheduler-select {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.appointment-scheduler-select:focus {
+  outline: none;
+  ring-width: 2px;
+  ring-color: #3b82f6;
+  border-color: transparent;
+}
+
+.appointment-scheduler-date-wrapper,
+.appointment-scheduler-time-wrapper {
+  position: relative;
+}
+
+.appointment-scheduler-date-wrapper::after,
+.appointment-scheduler-time-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.appointment-scheduler-date-wrapper::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /%3E%3C/svg%3E");
+}
+
+.dark .appointment-scheduler-date-wrapper::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /%3E%3C/svg%3E");
+}
+
+.appointment-scheduler-time-wrapper::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
+}
+
+.dark .appointment-scheduler-time-wrapper::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
+}
+
+.appointment-scheduler-date,
+.appointment-scheduler-time {
+  width: 100%;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #374151;
+  appearance: none;
+  transition: all 0.2s;
+}
+
+.dark .appointment-scheduler-date,
+.dark .appointment-scheduler-time {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.appointment-scheduler-date:focus,
+.appointment-scheduler-time:focus {
+  outline: none;
+  ring-width: 2px;
+  ring-color: #3b82f6;
+  border-color: transparent;
+}
+
+.appointment-scheduler-primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.appointment-scheduler-primary-btn:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-scheduler-secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #e5e7eb;
+  color: #374151;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.dark .appointment-scheduler-secondary-btn {
+  background-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.appointment-scheduler-secondary-btn:hover {
+  background-color: #d1d5db;
+}
+
+.dark .appointment-scheduler-secondary-btn:hover {
+  background-color: #6b7280;
+}
+
+/* Hide default date/time icons in Webkit browsers */
+.appointment-scheduler-date::-webkit-calendar-picker-indicator,
+.appointment-scheduler-time::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Ensure our custom icons appear above the hidden default ones */
+.appointment-scheduler-date-wrapper::after,
+.appointment-scheduler-time-wrapper::after {
+  z-index: 2;
+}
+ 
+ 
+ 
+ 
+ 
