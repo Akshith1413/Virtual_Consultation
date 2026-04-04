@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useState } from 'react';
+﻿import React, { useRef, useMemo, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Html } from '@react-three/drei';
@@ -159,7 +159,7 @@ export default function StomachModel({
               className="bg-slate-900/90 backdrop-blur-xl rounded-2xl p-4 border border-amber-500/30 shadow-2xl shadow-amber-500/20 min-w-[200px]"
               style={{ pointerEvents: 'none' }}
             >
-              <h4 className="text-amber-400 font-bold text-sm mb-2">🍽️ Digestion</h4>
+              <h4 className="text-amber-400 font-bold text-sm mb-2">ðŸ½ï¸ Digestion</h4>
               {Object.entries(healthData).map(([key, value]) => (
                 <div key={key} className="flex justify-between text-xs py-1 border-b border-slate-700/50 last:border-0">
                   <span className="text-gray-400 capitalize">{key}</span>
@@ -183,4 +183,3 @@ export default function StomachModel({
  
  
 
-// minor tweak for clarity
