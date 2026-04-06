@@ -117,3 +117,5 @@ a.INVALID_PARAMETER=rd();a.UNSUPPORTED_VERSION=sd();a.UNKNOWN_VERSION=td()}za?b(
 "object"===typeof exports&&"object"===typeof module?module.exports=DracoDecoderModule:"function"===typeof define&&define.amd?define([],function(){return DracoDecoderModule}):"object"===typeof exports&&(exports.DracoDecoderModule=DracoDecoderModule);
  
  
+
+// minor tweak for clarity
