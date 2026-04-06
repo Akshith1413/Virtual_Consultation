@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import HeartModel from '../3d/models/HeartModel';
 import LungsModel from '../3d/models/LungsModel';
 import BrainModel from '../3d/models/BrainModel';
@@ -33,6 +33,5 @@ export default function Organ3D({ type, position, label, healthData, onClick, sc
       return <HeartModel {...props} />;
   }
 } 
- 
  
  
