@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext, useMemo } from 'react';
+﻿import React, { useState, useEffect, createContext, useContext, useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell, Area, AreaChart, Legend } from 'recharts';
 import {
   Plus, Search, Filter, Calendar, Clock, AlertTriangle, TrendingUp, DollarSign,
@@ -698,7 +698,7 @@ const SupplementManagementSystem = () => {
         // Get doses per day based on frequency
         const dosesPerDay = getDosesPerDay(supp.frequency);
 
-        // Calculate daily cost (cost per serving Ã— doses per day)
+        // Calculate daily cost (cost per serving Ãƒâ€” doses per day)
         const dailyCost = costPerServing * dosesPerDay;
 
         return {
@@ -2742,7 +2742,7 @@ const SupplementManagementSystem = () => {
                         <p className="font-medium dark:text-white">{getSupplementName(intake)}</p>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
                           {intake.dosageTaken} units
-                          {intake.notes && ` • ${intake.notes}`}
+                          {intake.notes && ` â€¢ ${intake.notes}`}
                         </p>
                       </div>
                     </div>
@@ -3015,7 +3015,6 @@ const AppWithTheme = () => (
 );
 
 export default AppWithTheme;
- 
  
  
  
