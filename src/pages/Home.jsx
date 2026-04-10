@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Navigate } from 'react-router-dom';
 import Landing3D from './Landing3D';
@@ -17,7 +17,6 @@ const Home = () => {
 };
 
 export default Home; 
- 
  
  
  
