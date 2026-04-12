@@ -70,3 +70,5 @@ const AIHealthAssistantSection = () => {
 export default AIHealthAssistantSection;
  
  
+
+// minor tweak for clarity
