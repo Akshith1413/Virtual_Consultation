@@ -1,18 +1,18 @@
-import React, { useRef, useState } from 'react';
+﻿import React, { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Html, Float } from '@react-three/drei';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FEATURES = [
-  { id: 'ai-hub', title: 'AI Health Center', desc: 'Symptom checker, risk analysis & predictive health insights.', color: '#6366f1', icon: '🧠' },
-  { id: 'body-insights', title: '3D Body Insights', desc: 'Interactive anatomical explorer & organ-specific vitals.', color: '#06b6d4', icon: '👤' },
-  { id: 'nutrition', title: 'Nutrition Engine', desc: 'USDA food search, macro tracking & smart meal planning.', color: '#10b981', icon: '🥗' },
-  { id: 'consult', title: 'Virtual Consultation', desc: 'Secure chat, video & voice calls with medical experts.', color: '#a855f7', icon: '📹' },
-  { id: 'supplements', title: 'Smart Supplements', desc: 'Intake logging, interaction checks & supplement management.', color: '#d946ef', icon: '💊' },
-  { id: 'dashboard', title: 'Health Dashboard', desc: 'Comprehensive daily overview with live fitness metrics.', color: '#3b82f6', icon: '📊' },
-  { id: 'community', title: 'Community Hub', desc: 'Expert-led health groups, daily tips & peer support.', color: '#14b8a6', icon: '👥' },
-  { id: 'records', title: 'Medical Records', desc: 'Secure storage for reports, history & digital prescriptions.', color: '#f59e0b', icon: '📂' },
+  { id: 'ai-hub', title: 'AI Health Center', desc: 'Symptom checker, risk analysis & predictive health insights.', color: '#6366f1', icon: 'ðŸ§ ' },
+  { id: 'body-insights', title: '3D Body Insights', desc: 'Interactive anatomical explorer & organ-specific vitals.', color: '#06b6d4', icon: 'ðŸ‘¤' },
+  { id: 'nutrition', title: 'Nutrition Engine', desc: 'USDA food search, macro tracking & smart meal planning.', color: '#10b981', icon: 'ðŸ¥—' },
+  { id: 'consult', title: 'Virtual Consultation', desc: 'Secure chat, video & voice calls with medical experts.', color: '#a855f7', icon: 'ðŸ“¹' },
+  { id: 'supplements', title: 'Smart Supplements', desc: 'Intake logging, interaction checks & supplement management.', color: '#d946ef', icon: 'ðŸ’Š' },
+  { id: 'dashboard', title: 'Health Dashboard', desc: 'Comprehensive daily overview with live fitness metrics.', color: '#3b82f6', icon: 'ðŸ“Š' },
+  { id: 'community', title: 'Community Hub', desc: 'Expert-led health groups, daily tips & peer support.', color: '#14b8a6', icon: 'ðŸ‘¥' },
+  { id: 'records', title: 'Medical Records', desc: 'Secure storage for reports, history & digital prescriptions.', color: '#f59e0b', icon: 'ðŸ“‚' },
 ];
 
 const CRYSTAL_POSITIONS = [
@@ -196,4 +196,3 @@ export default function FeaturesIsland({ position = [0, 0, 0], onFeatureSelect, 
 
 // minor tweak for clarity
 
-// minor tweak for clarity
