@@ -40,4 +40,3 @@ export default function PostProcessingEffects({
 }
  
 
-// minor tweak for clarity
