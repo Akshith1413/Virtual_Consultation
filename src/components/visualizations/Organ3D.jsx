@@ -37,3 +37,5 @@ export default function Organ3D({ type, position, label, healthData, onClick, sc
  
 
 // minor tweak for clarity
+
+// minor tweak for clarity
