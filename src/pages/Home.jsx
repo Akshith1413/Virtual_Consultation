@@ -24,3 +24,5 @@ export default Home;
  
  
  
+
+// minor tweak for clarity
