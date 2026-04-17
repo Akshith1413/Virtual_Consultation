@@ -67,3 +67,5 @@ export default function WellnessTreeWidget({ healthScore = 75, className = '' })
  
  
  
+
+// minor tweak for clarity
