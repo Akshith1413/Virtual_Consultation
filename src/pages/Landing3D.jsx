@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, Suspense, useRef, useMemo } from 'react';
+﻿import React, { useState, useEffect, useCallback, Suspense, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { Stars, Preload } from '@react-three/drei';
@@ -57,7 +57,7 @@ export default function Landing3D() {
   const scrollCooldown = useRef(false);
   const touchStartY = useRef(0);
 
-  // Scroll handler — navigate between islands
+  // Scroll handler â€” navigate between islands
   const handleWheel = useCallback((e) => {
     if (scrollCooldown.current) return;
 
@@ -366,4 +366,3 @@ export default function Landing3D() {
  
  
 
-// minor tweak for clarity
