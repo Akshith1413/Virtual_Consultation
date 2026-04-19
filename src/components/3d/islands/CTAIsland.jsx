@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from 'react';
+﻿import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Html, Float } from '@react-three/drei';
@@ -204,7 +204,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                   className="bg-red-500/5 backdrop-blur-xl rounded-[0.75rem] p-3 border border-red-500/20 text-left"
                 >
                   <h3 className="text-[11px] font-black text-red-400 mb-2 flex items-center gap-2">
-                    <span className="w-4 h-4 rounded-full bg-red-500/20 flex items-center justify-center text-[7px]">✕</span>
+                    <span className="w-4 h-4 rounded-full bg-red-500/20 flex items-center justify-center text-[7px]">âœ•</span>
                     The Problem
                   </h3>
                   <ul className="space-y-1.5">
@@ -215,7 +215,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                       "No predictive insights"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-gray-400 text-[8px]">
-                        <span className="text-red-500/50">•</span>
+                        <span className="text-red-500/50">â€¢</span>
                         {item}
                       </li>
                     ))}
@@ -230,7 +230,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                   className="bg-emerald-500/5 backdrop-blur-xl rounded-[0.75rem] p-3 border border-emerald-500/20 text-left"
                 >
                   <h3 className="text-[11px] font-black text-emerald-400 mb-2 flex items-center gap-2">
-                    <span className="w-4 h-4 rounded-full bg-emerald-500/20 flex items-center justify-center text-[7px]">✓</span>
+                    <span className="w-4 h-4 rounded-full bg-emerald-500/20 flex items-center justify-center text-[7px]">âœ“</span>
                     Our Solution
                   </h3>
                   <ul className="space-y-1.5">
@@ -241,7 +241,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                       "Direct expert access"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-gray-200 text-[8px]">
-                        <span className="text-emerald-500">•</span>
+                        <span className="text-emerald-500">â€¢</span>
                         {item}
                       </li>
                     ))}
@@ -270,7 +270,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                     onClick={() => onNavigate?.('/signup')}
                     className="px-6 py-2.5 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right text-white font-black text-sm rounded-lg shadow-2xl transition-all duration-500"
                   >
-                    🚀 Get Started Free
+                    ðŸš€ Get Started Free
                   </motion.button>
                 </div>
               </motion.div>
@@ -306,7 +306,6 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
     </group>
   );
 }
- 
  
  
  
