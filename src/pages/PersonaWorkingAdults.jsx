@@ -18,7 +18,7 @@ export default function PersonaWorkingAdults() {
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg mt-8">
             Juggling deadlines, meetings, and personal life can make wellness feel impossible. 
-            Our AI-powered tracker helps you stay fit, energized, and focused â€” without disrupting your workday.
+            Our AI-powered tracker helps you stay fit, energized, and focused — without disrupting your workday.
           </p>
 
           {/* Feature List */}
@@ -54,7 +54,7 @@ export default function PersonaWorkingAdults() {
               <div>
                 <h3 className="font-semibold text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors mb-2">Office-Friendly Workouts</h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Desk stretches, posture correction, and quick cardio â€” all doable in 5â€“10 minutes.
+                  Desk stretches, posture correction, and quick cardio — all doable in 5â€“10 minutes.
                 </p>
               </div>
             </li>

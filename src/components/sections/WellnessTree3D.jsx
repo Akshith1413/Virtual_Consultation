@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import { Html, Float } from '@react-three/drei';
 
 /**
- * WellnessTree3D â€” Complete rewrite with recursive branching algorithm.
+ * WellnessTree3D — Complete rewrite with recursive branching algorithm.
  * Tree size/health reflects the user's overall health score.
  * Branches for different health aspects, fruits for metric completion.
  */

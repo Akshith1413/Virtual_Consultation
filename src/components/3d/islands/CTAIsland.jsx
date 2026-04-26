@@ -215,7 +215,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                       "No predictive insights"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-gray-400 text-[8px]">
-                        <span className="text-red-500/50">â€¢</span>
+                        <span className="text-red-500/50">•</span>
                         {item}
                       </li>
                     ))}
@@ -241,7 +241,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                       "Direct expert access"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-gray-200 text-[8px]">
-                        <span className="text-emerald-500">â€¢</span>
+                        <span className="text-emerald-500">•</span>
                         {item}
                       </li>
                     ))}
@@ -270,7 +270,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                     onClick={() => onNavigate?.('/signup')}
                     className="px-6 py-2.5 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right text-white font-black text-sm rounded-lg shadow-2xl transition-all duration-500"
                   >
-                    ðŸš€ Get Started Free
+                    🚀 Get Started Free
                   </motion.button>
                 </div>
               </motion.div>

@@ -18,7 +18,7 @@ const TESTIMONIALS = [
   {
     name: "Priya Kapoor",
     role: "HR Specialist",
-    text: "From meal plans to virtual doctor consults â€” I feel in control of my wellness for the first time.",
+    text: "From meal plans to virtual doctor consults — I feel in control of my wellness for the first time.",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     rating: 4,
   },

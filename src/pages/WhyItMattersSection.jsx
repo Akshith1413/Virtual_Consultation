@@ -38,19 +38,19 @@ export default function WhyItMattersSection() {
             </h3>
             <ul className="space-y-3 text-gray-600 dark:text-gray-300 text-xl">
               <li className="flex items-start mb-6">
-                <span className="text-red-500 dark:text-red-400 mr-2">â€¢</span>
+                <span className="text-red-500 dark:text-red-400 mr-2">•</span>
                 <span>Generic tracking without personalized recommendations</span>
               </li>
               <li className="flex items-start mb-6">
-                <span className="text-red-500 dark:text-red-400 mr-2">â€¢</span>
+                <span className="text-red-500 dark:text-red-400 mr-2">•</span>
                 <span>No emotional engagement or real-time feedback</span>
               </li>
               <li className="flex items-start mb-6">
-                <span className="text-red-500 dark:text-red-400 mr-2">â€¢</span>
+                <span className="text-red-500 dark:text-red-400 mr-2">•</span>
                 <span>Limited language and accessibility options</span>
               </li>
               <li className="flex items-start mb-6">
-                <span className="text-red-500 dark:text-red-400 mr-2">â€¢</span>
+                <span className="text-red-500 dark:text-red-400 mr-2">•</span>
                 <span>Weak integration with devices and IoT</span>
               </li>
             </ul>

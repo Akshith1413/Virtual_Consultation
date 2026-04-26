@@ -736,7 +736,7 @@ const Dashboard = () => {
                                         return (
                                             <div key={meal} className="flex flex-col items-center gap-1">
                                                 <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-inner ${logged || detailedMeal ? (logged?.skipped ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-500' : 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-500') : 'bg-gray-100 dark:bg-slate-700 text-gray-400'}`}>
-                                                    {logged || detailedMeal ? (logged?.skipped ? 'âŒš' : 'âœ…') : 'âŒ›'}
+                                                    {logged || detailedMeal ? (logged?.skipped ? 'âŒš' : '✅') : 'âŒ›'}
                                                 </div>
                                                 <span className="text-[10px] font-bold text-gray-400 capitalize">{meal}</span>
                                             </div>
@@ -1018,7 +1018,7 @@ const Dashboard = () => {
                                 <div>
                                     <p className="text-xs text-gray-500 dark:text-gray-400">BMI</p>
                                     <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                                        {healthProfile?.bmi ? <AnimatedCounter value={healthProfile.bmi} decimals={1} /> : 'â€”'}
+                                        {healthProfile?.bmi ? <AnimatedCounter value={healthProfile.bmi} decimals={1} /> : '—'}
                                     </p>
                                 </div>
                             </div>
@@ -1046,7 +1046,7 @@ const Dashboard = () => {
                                 <div>
                                     <p className="text-xs text-gray-500 dark:text-gray-400">Weight</p>
                                     <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                                        {healthProfile?.weight ? <><AnimatedCounter value={healthProfile.weight} decimals={1} /><span className="text-sm font-normal text-gray-400 ml-1">kg</span></> : 'â€”'}
+                                        {healthProfile?.weight ? <><AnimatedCounter value={healthProfile.weight} decimals={1} /><span className="text-sm font-normal text-gray-400 ml-1">kg</span></> : '—'}
                                     </p>
                                 </div>
                             </div>
@@ -1066,7 +1066,7 @@ const Dashboard = () => {
                                 <div>
                                     <p className="text-xs text-gray-500 dark:text-gray-400">Height</p>
                                     <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                                        {healthProfile?.height ? <><AnimatedCounter value={healthProfile.height} decimals={0} /><span className="text-sm font-normal text-gray-400 ml-1">cm</span></> : 'â€”'}
+                                        {healthProfile?.height ? <><AnimatedCounter value={healthProfile.height} decimals={0} /><span className="text-sm font-normal text-gray-400 ml-1">cm</span></> : '—'}
                                     </p>
                                 </div>
                             </div>

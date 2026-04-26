@@ -698,7 +698,7 @@ const SupplementManagementSystem = () => {
         // Get doses per day based on frequency
         const dosesPerDay = getDosesPerDay(supp.frequency);
 
-        // Calculate daily cost (cost per serving Ãƒâ€” doses per day)
+        // Calculate daily cost (cost per serving Ãƒ— doses per day)
         const dailyCost = costPerServing * dosesPerDay;
 
         return {
@@ -2742,7 +2742,7 @@ const SupplementManagementSystem = () => {
                         <p className="font-medium dark:text-white">{getSupplementName(intake)}</p>
                         <p className="text-sm text-gray-600 dark:text-gray-400">
                           {intake.dosageTaken} units
-                          {intake.notes && ` â€¢ ${intake.notes}`}
+                          {intake.notes && ` • ${intake.notes}`}
                         </p>
                       </div>
                     </div>

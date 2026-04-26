@@ -68,8 +68,8 @@ export default function OrganViewerWidget({
       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/90 to-transparent">
         <div className="flex items-center justify-between">
           <div>
-            <h4 className="text-white font-bold text-sm">ðŸ«€ Body Overview</h4>
-            <p className="text-gray-400 text-xs mt-0.5">Hover organs for metrics â€¢ Drag to rotate</p>
+            <h4 className="text-white font-bold text-sm">🫁 Body Overview</h4>
+            <p className="text-gray-400 text-xs mt-0.5">Hover organs for metrics • Drag to rotate</p>
           </div>
         </div>
       </div>

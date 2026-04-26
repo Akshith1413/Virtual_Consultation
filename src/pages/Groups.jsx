@@ -24,9 +24,9 @@ const Groups = () => {
 
   const categories = [
     { value: 'chronic_diseases', label: 'Chronic Diseases', icon: 'ðŸ¥' },
-    { value: 'mental_health', label: 'Mental Health', icon: 'ðŸ§ ' },
-    { value: 'fitness_goals', label: 'Fitness Goals', icon: 'ðŸ’ª' },
-    { value: 'diet_nutrition', label: 'Diet & Nutrition', icon: 'ðŸ¥—' },
+    { value: 'mental_health', label: 'Mental Health', icon: '🧠' },
+    { value: 'fitness_goals', label: 'Fitness Goals', icon: '💪' },
+    { value: 'diet_nutrition', label: 'Diet & Nutrition', icon: '🥗' },
     { value: 'recovery_support', label: 'Recovery Support', icon: 'ðŸŒ±' },
     { value: 'preventive_care', label: 'Preventive Care', icon: 'ðŸ›¡ï¸' },
     { value: 'family_health', icon: 'ðŸ‘¨â€ðŸ‘©â€ðŸ‘§â€ðŸ‘¦', label: 'Family Health' },

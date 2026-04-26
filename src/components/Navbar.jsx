@@ -67,7 +67,7 @@ const Navbar = () => {
                     transition: 'all 0.2s',
                   }}
                 >
-                  ðŸ§  AI Hub
+                  🧠 AI Hub
                 </button>
                 <button
                   onClick={() => navigate('/profile')}

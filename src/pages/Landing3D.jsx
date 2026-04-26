@@ -57,7 +57,7 @@ export default function Landing3D() {
   const scrollCooldown = useRef(false);
   const touchStartY = useRef(0);
 
-  // Scroll handler â€” navigate between islands
+  // Scroll handler — navigate between islands
   const handleWheel = useCallback((e) => {
     if (scrollCooldown.current) return;
 

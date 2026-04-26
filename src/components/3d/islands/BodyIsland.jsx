@@ -11,7 +11,7 @@ import KidneyModel from '../models/KidneyModel';
 
 /**
  * BodyIsland: Transparent human body silhouette with floating organs.
- * Each organ is interactive â€” hover highlights, click shows health data.
+ * Each organ is interactive — hover highlights, click shows health data.
  * Particle blood flow connecting all organs.
  */
 

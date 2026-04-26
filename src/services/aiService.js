@@ -1,5 +1,5 @@
 /**
- * AI Service â€” Frontend API wrapper for all AI endpoints
+ * AI Service — Frontend API wrapper for all AI endpoints
  */
 import axios from 'axios';
 

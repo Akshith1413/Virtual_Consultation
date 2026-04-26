@@ -10,9 +10,9 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { getBodyInsights } from '../services/aiService';
 import '../styles/BodyInsights.css';
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 1 â€” MODEL CONFIG & BODY REGION MAPPING
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════
+   SECTION 1 — MODEL CONFIG & BODY REGION MAPPING
+   ═══════════════════════════════════════════════════ */
 
 const MODEL_URL = '/models/body.glb';
 const DRACO_PATH = '/draco/';
@@ -109,14 +109,14 @@ const classifyMesh = (name) => {
     n.includes('leg') || n.includes('thigh') || n.includes('shin')
   ) return 'legs';
 
-  // Default â€” group uncategorized meshes with abdomen (central body)
+  // Default — group uncategorized meshes with abdomen (central body)
   return 'abdomen';
 };
 
 /* Medical specialty-linked organ data for the detail panel */
 const ORGAN_DATA = {
   brain: {
-    name: 'Brain', emoji: 'ðŸ§ ', specialty: 'Neurology & Neurosurgery',
+    name: 'Brain', emoji: '🧠', specialty: 'Neurology & Neurosurgery',
     overview: 'Command center with 86 billion neurons, controlling thought, memory, emotion, and every bodily process.',
     metrics: [{ value: '86B', label: 'Neurons' }, { value: '100K', label: 'Miles Vessels' }, { value: '20%', label: 'Body Energy' }],
     doctors: [
@@ -149,7 +149,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Heart Attack', color: '#ef4444' }, { name: 'Arrhythmia', color: '#f59e0b' }, { name: 'Heart Failure', color: '#dc2626' }, { name: 'Hypertension', color: '#f87171' }, { name: 'Valve Disease', color: '#a78bfa' }, { name: 'Coronary Artery', color: '#fb923c' }],
   },
   lungs: {
-    name: 'Lungs', emoji: 'ðŸ«', specialty: 'Pulmonology',
+    name: 'Lungs', emoji: '🫁', specialty: 'Pulmonology',
     overview: '300 million alveoli, 70mÂ² surface area. 20,000 breaths daily processing 2,100 gallons of air.',
     metrics: [{ value: '300M', label: 'Alveoli' }, { value: '20K', label: 'Breaths/Day' }, { value: '70mÂ²', label: 'Surface' }],
     doctors: [
@@ -171,7 +171,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Breast Pain', color: '#ec4899' }, { name: 'Lump/Cyst', color: '#db2777' }, { name: 'Fibroadenoma', color: '#f472b6' }, { name: 'Mastitis', color: '#be185d' }],
   },
   chest_muscles: {
-    name: 'Chest / Pectorals', emoji: 'ðŸ’ª', specialty: 'General & Sports Medicine', gender: 'male',
+    name: 'Chest / Pectorals', emoji: '💪', specialty: 'General & Sports Medicine', gender: 'male',
     overview: 'The pectoral muscles support arm movement and deep breathing.',
     metrics: [{ value: 'Major', label: 'Muscles' }, { value: 'High', label: 'Mobility' }, { value: 'Crucial', label: 'Core Support' }],
     doctors: [
@@ -181,7 +181,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Strained Pectoral', color: '#ef4444' }, { name: 'Costochondritis', color: '#f87171' }]
   },
   stomach: {
-    name: 'Stomach & Digestive', emoji: 'ðŸ”¶', specialty: 'Gastroenterology',
+    name: 'Stomach & Digestive', emoji: '🔸', specialty: 'Gastroenterology',
     overview: 'Holds 1.5L, produces 2L acid daily. The gut lining renews every 3-4 days and has its own nervous system.',
     metrics: [{ value: '1.5L', label: 'Capacity' }, { value: '2L', label: 'Acid/Day' }, { value: '3-4d', label: 'Renewal' }],
     doctors: [
@@ -192,7 +192,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'GERD', color: '#fb923c' }, { name: 'Gastritis', color: '#f87171' }, { name: 'Ulcers', color: '#ef4444' }, { name: 'IBS', color: '#fbbf24' }, { name: "Crohn's", color: '#a78bfa' }, { name: 'Food Poisoning', color: '#4ade80' }],
   },
   liver: {
-    name: 'Liver', emoji: 'ðŸŸ¤', specialty: 'Hepatology',
+    name: 'Liver', emoji: '🟤', specialty: 'Hepatology',
     overview: '500+ vital functions, filters 1.4L blood per minute. Can regenerate after losing 75% of its mass.',
     metrics: [{ value: '500+', label: 'Functions' }, { value: '1.4L', label: 'Blood/Min' }, { value: '75%', label: 'Regen' }],
     doctors: [
@@ -203,7 +203,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Hepatitis', color: '#ef4444' }, { name: 'Cirrhosis', color: '#a3764f' }, { name: 'Fatty Liver', color: '#fbbf24' }, { name: 'Liver Cancer', color: '#dc2626' }, { name: 'Jaundice', color: '#fde047' }, { name: 'Gallstones', color: '#94a3b8' }],
   },
   kidneys: {
-    name: 'Kidneys', emoji: 'ðŸ«˜', specialty: 'Nephrology',
+    name: 'Kidneys', emoji: '🫁˜', specialty: 'Nephrology',
     overview: 'Filters 200L of blood daily. 1 million nephrons per kidney. Regulates BP, electrolytes, red blood cells.',
     metrics: [{ value: '200L', label: 'Blood/Day' }, { value: '1M', label: 'Nephrons' }, { value: '24/7', label: 'Filter' }],
     doctors: [
@@ -214,7 +214,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Kidney Stones', color: '#fbbf24' }, { name: 'Chronic Kidney', color: '#ef4444' }, { name: 'UTI', color: '#f87171' }, { name: 'PKD', color: '#c084fc' }, { name: 'Nephritis', color: '#fb923c' }, { name: 'Renal Failure', color: '#dc2626' }],
   },
   spine: {
-    name: 'Spine & Back', emoji: 'ðŸ¦´', specialty: 'Orthopedics',
+    name: 'Spine & Back', emoji: '🦴', specialty: 'Orthopedics',
     overview: '33 vertebrae, 31 nerve pairs, 120+ muscles. Protects the spinal cord and enables movement.',
     metrics: [{ value: '33', label: 'Vertebrae' }, { value: '120+', label: 'Muscles' }, { value: '31', label: 'Nerve Pairs' }],
     doctors: [
@@ -225,8 +225,8 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Herniated Disc', color: '#f87171' }, { name: 'Scoliosis', color: '#fb923c' }, { name: 'Spinal Stenosis', color: '#fbbf24' }, { name: 'Sciatica', color: '#ef4444' }, { name: 'Osteoporosis', color: '#94a3b8' }, { name: 'Back Pain', color: '#a78bfa' }],
   },
   shoulders: {
-    name: 'Shoulders & Arms', emoji: 'ðŸ’ª', specialty: 'Sports Medicine',
-    overview: 'Most mobile joint â€” 4 joints, 30+ muscles, 360Â° rotation. Arms contain 64 bones and hundreds of muscles.',
+    name: 'Shoulders & Arms', emoji: '💪', specialty: 'Sports Medicine',
+    overview: 'Most mobile joint — 4 joints, 30+ muscles, 360Â° rotation. Arms contain 64 bones and hundreds of muscles.',
     metrics: [{ value: '4', label: 'Joints' }, { value: '30+', label: 'Muscles' }, { value: '360Â°', label: 'Rotation' }],
     doctors: [
       { name: 'Dr. Marcus Johnson', spec: 'Sports Med, 16 yrs', rating: 4.9, initials: 'MJ', bg: '#dc2626', status: 'online' },
@@ -236,7 +236,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Rotator Cuff', color: '#ef4444' }, { name: 'Frozen Shoulder', color: '#60a5fa' }, { name: 'Tennis Elbow', color: '#fbbf24' }, { name: 'Carpal Tunnel', color: '#fb923c' }, { name: 'Fractures', color: '#94a3b8' }, { name: 'Tendinitis', color: '#a78bfa' }],
   },
   knees: {
-    name: 'Legs & Knees', emoji: 'ðŸ¦µ', specialty: 'Orthopedics',
+    name: 'Legs & Knees', emoji: '🦵', specialty: 'Orthopedics',
     overview: 'Largest joint bearing 6Ã— body weight. 4 major ligaments, 2 menisci. Legs contain the strongest muscles.',
     metrics: [{ value: '6x', label: 'Force' }, { value: '4', label: 'Ligaments' }, { value: '2', label: 'Menisci' }],
     doctors: [
@@ -247,7 +247,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'ACL Tear', color: '#ef4444' }, { name: 'Arthritis', color: '#22d3ee' }, { name: 'Meniscus Tear', color: '#fbbf24' }, { name: "Runner's Knee", color: '#fb923c' }, { name: 'Plantar Fasciitis', color: '#8b5cf6' }, { name: 'Ankle Sprain', color: '#f87171' }],
   },
   female_pelvis: {
-    name: 'Pelvis & Reproductive', emoji: 'ðŸ©»', specialty: 'Gynecology & Urology', gender: 'female',
+    name: 'Pelvis & Reproductive', emoji: '🩻', specialty: 'Gynecology & Urology', gender: 'female',
     overview: 'Contains the bladder and reproductive organs. Crucial for urological and reproductive health.',
     metrics: [{ value: '3', label: 'Fused Bones' }, { value: 'Annual', label: 'Screening' }, { value: 'Base', label: 'Spine' }],
     doctors: [
@@ -258,7 +258,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Pelvic Pain', color: '#db2777' }, { name: 'Endometriosis', color: '#ec4899' }, { name: 'UTI', color: '#4f46e5' }, { name: 'PCOS', color: '#f472b6' }],
   },
   male_pelvis: {
-    name: 'Pelvis & Reproductive', emoji: 'ðŸ©»', specialty: 'Urology', gender: 'male',
+    name: 'Pelvis & Reproductive', emoji: '🩻', specialty: 'Urology', gender: 'male',
     overview: 'Contains the prostate, bladder, and reproductive organs. Crucial for urological health.',
     metrics: [{ value: '3', label: 'Fused Bones' }, { value: 'Annual', label: 'Prostate Check' }, { value: 'Base', label: 'Spine' }],
     doctors: [
@@ -307,7 +307,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Hypothyroidism', color: '#ec4899' }, { name: 'Neck Strain', color: '#f472b6' }]
   },
   intestines: {
-    name: 'Intestines', emoji: 'ðŸŒ­', specialty: 'Gastroenterology',
+    name: 'Intestines', emoji: '🥨', specialty: 'Gastroenterology',
     overview: 'Over 25 feet long, responsible for absorbing 90% of nutrients and housing the gut microbiome.',
     metrics: [{ value: '25ft', label: 'Length' }, { value: '90%', label: 'Absorption' }, { value: 'Trillions', label: 'Bacteria' }],
     doctors: [
@@ -325,7 +325,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Eczema', color: '#10b981' }, { name: 'Melanoma', color: '#059669' }, { name: 'Psoriasis', color: '#34d399' }]
   },
   vascular: {
-    name: 'Vascular System', emoji: 'ðŸ©¸', specialty: 'Vascular Surgery',
+    name: 'Vascular System', emoji: '🩸', specialty: 'Vascular Surgery',
     overview: 'A 60,000-mile network of arteries, veins, and capillaries transporting blood, oxygen, and nutrients.',
     metrics: [{ value: '60K Miles', label: 'Length' }, { value: 'Vital', label: 'Transport' }, { value: '5L', label: 'Blood Vol' }],
     doctors: [
@@ -346,12 +346,12 @@ const ORGAN_DATA = {
 
 /* Regions for navigation */
 const REGIONS = {
-  head: { name: 'Head & Brain', emoji: 'ðŸ§ ', organs: ['brain', 'eyes', 'ears', 'nose', 'mouth', 'neck'], color: '#a78bfa' },
-  chest: { name: 'Chest & Thorax', emoji: 'ðŸ«', organs: ['heart', 'lungs', 'breasts', 'chest_muscles', 'vascular'], color: '#f87171' },
-  abdomen: { name: 'Abdomen & Core', emoji: 'ðŸ”¶', organs: ['stomach', 'intestines', 'liver', 'spine'], color: '#fb923c' },
-  pelvis: { name: 'Pelvis Area', emoji: 'ðŸ©»', organs: ['female_pelvis', 'male_pelvis', 'kidneys'], color: '#c084fc' },
-  arms: { name: 'Arms & Hands', emoji: 'ðŸ’ª', organs: ['shoulders', 'skin'], color: '#fbbf24' },
-  legs: { name: 'Legs & Feet', emoji: 'ðŸ¦µ', organs: ['knees', 'nerves'], color: '#22d3ee' },
+  head: { name: 'Head & Brain', emoji: '🧠', organs: ['brain', 'eyes', 'ears', 'nose', 'mouth', 'neck'], color: '#a78bfa' },
+  chest: { name: 'Chest & Thorax', emoji: '🫁', organs: ['heart', 'lungs', 'breasts', 'chest_muscles', 'vascular'], color: '#f87171' },
+  abdomen: { name: 'Abdomen & Core', emoji: '🔸', organs: ['stomach', 'intestines', 'liver', 'spine'], color: '#fb923c' },
+  pelvis: { name: 'Pelvis Area', emoji: '🩻', organs: ['female_pelvis', 'male_pelvis', 'kidneys'], color: '#c084fc' },
+  arms: { name: 'Arms & Hands', emoji: '💪', organs: ['shoulders', 'skin'], color: '#fbbf24' },
+  legs: { name: 'Legs & Feet', emoji: '🦵', organs: ['knees', 'nerves'], color: '#22d3ee' },
 };
 
 /* Camera presets for each region and the body overview */
@@ -366,9 +366,9 @@ const CAM = {
 };
 
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 2 â€” CUSTOM DRACO-ENABLED GLTF LOADER
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════
+   SECTION 2 — CUSTOM DRACO-ENABLED GLTF LOADER
+   ═══════════════════════════════════════════════════ */
 
 /* drei's useGLTF uses DRACOLoader from CDN. We override to use our local decoder. */
 function useDracoGLTF(url) {
@@ -402,11 +402,11 @@ function useDracoGLTF(url) {
   return { gltf: result, error };
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 3 â€” 3D SCENE COMPONENTS
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════
+   SECTION 3 — 3D SCENE COMPONENTS
+   ═══════════════════════════════════════════════════ */
 
-/* Camera controller â€” smooth transitions */
+/* Camera controller — smooth transitions */
 const CameraRig = ({ targetPos, targetLook, autoRotate, resetTrigger }) => {
   const { camera } = useThree();
   const controlsRef = useRef();
@@ -613,7 +613,7 @@ const BodyScene = ({ viewLevel, selectedRegion, selectedOrgan, hoveredMesh, setH
 
   return (
     <>
-      {/* Lighting â€” warm, medical-grade */}
+      {/* Lighting — warm, medical-grade */}
       <ambientLight intensity={0.5} color="#f0f4ff" />
       <directionalLight position={[4, 6, 5]} intensity={0.9} color="#ffffff" castShadow />
       <directionalLight position={[-3, 4, -3]} intensity={0.3} color="#818cf8" />
@@ -650,7 +650,7 @@ const BodyScene = ({ viewLevel, selectedRegion, selectedOrgan, hoveredMesh, setH
       <gridHelper args={[4, 20, '#111827', '#111827']} position={[0, 0, 0]} />
       <ContactShadows position={[0, 0.005, 0]} opacity={0.2} scale={4} blur={2} far={2} color="#38bdf8" />
 
-      {/* Post-processing â€” subtle bloom for realism */}
+      {/* Post-processing — subtle bloom for realism */}
       <EffectComposer>
         <Bloom luminanceThreshold={0.6} luminanceSmoothing={0.9} intensity={0.3} />
       </EffectComposer>
@@ -660,9 +660,9 @@ const BodyScene = ({ viewLevel, selectedRegion, selectedOrgan, hoveredMesh, setH
   );
 };
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 4 â€” DETAIL PANEL (2D)
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════
+   SECTION 4 — DETAIL PANEL (2D)
+   ═══════════════════════════════════════════════════ */
 const DetailPanel = React.memo(({ organId, onClose, onNavigate }) => {
   const data = ORGAN_DATA[organId];
   if (!data) return null;
@@ -709,13 +709,13 @@ const DetailPanel = React.memo(({ organId, onClose, onNavigate }) => {
 
       {loadingAi ? (
         <div style={{ padding: '12px', fontSize: '13px', color: '#a5b4fc', textAlign: 'center', background: 'rgba(99,102,241,0.05)', borderRadius: '12px', marginBottom: '16px' }}>
-          ðŸ”„ Analyzing your health data...
+          🔄 Analyzing your health data...
         </div>
       ) : aiInsight ? (
         <div style={{ padding: '16px', background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: '12px', marginBottom: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
             <span style={{ fontSize: '14px', fontWeight: 600, color: '#e2e8f0', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              ðŸ§  AI Assessment
+              🧠 AI Assessment
             </span>
             <span style={{ fontSize: '12px', fontWeight: 600, padding: '2px 8px', borderRadius: '12px', background: aiInsight.riskLevel === 'Low' ? 'rgba(34,197,94,0.1)' : 'rgba(245,158,11,0.1)', color: aiInsight.riskLevel === 'Low' ? '#4ade80' : '#fbbf24' }}>
               Risk: {aiInsight.riskLevel}
@@ -742,8 +742,8 @@ const DetailPanel = React.memo(({ organId, onClose, onNavigate }) => {
       </div>
 
       <div className="bi-quick-actions">
-        <button className="bi-quick-btn primary" onClick={() => onNavigate('/appointments')}>ðŸ“… Book Appointment</button>
-        <button className="bi-quick-btn secondary" onClick={() => alert('ðŸ©º Report coming soon!')}>ðŸ“‹ Report</button>
+        <button className="bi-quick-btn primary" onClick={() => onNavigate('/appointments')}>📅… Book Appointment</button>
+        <button className="bi-quick-btn secondary" onClick={() => alert('ðŸ©º Report coming soon!')}>📅‹ Report</button>
       </div>
 
       <div className="bi-section-title">Top Specialists</div>
@@ -760,9 +760,9 @@ const DetailPanel = React.memo(({ organId, onClose, onNavigate }) => {
               </div>
             </div>
             <div className="bi-doctor-actions">
-              <button className="bi-action-btn call" onClick={(e) => { e.stopPropagation(); handleAction('call', doc.name); }}>ðŸ“ž</button>
-              <button className="bi-action-btn video" onClick={(e) => { e.stopPropagation(); handleAction('video', doc.name); }}>ðŸ“¹</button>
-              <button className="bi-action-btn chat" onClick={(e) => { e.stopPropagation(); handleAction('chat', doc.name); }}>ðŸ’¬</button>
+              <button className="bi-action-btn call" onClick={(e) => { e.stopPropagation(); handleAction('call', doc.name); }}>📅ž</button>
+              <button className="bi-action-btn video" onClick={(e) => { e.stopPropagation(); handleAction('video', doc.name); }}>📹</button>
+              <button className="bi-action-btn chat" onClick={(e) => { e.stopPropagation(); handleAction('chat', doc.name); }}>💬</button>
             </div>
           </motion.div>
         ))}
@@ -782,9 +782,9 @@ const DetailPanel = React.memo(({ organId, onClose, onNavigate }) => {
 });
 DetailPanel.displayName = 'DetailPanel';
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 5 â€” TOOLTIP for hovered mesh
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════
+   SECTION 5 — TOOLTIP for hovered mesh
+   ═══════════════════════════════════════════════════ */
 const MeshTooltip = ({ meshName, gender }) => {
   if (!meshName) return null;
 
@@ -823,9 +823,9 @@ const MeshTooltip = ({ meshName, gender }) => {
   );
 };
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 6 â€” MAIN PAGE COMPONENT
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════
+   SECTION 6 — MAIN PAGE COMPONENT
+   ═══════════════════════════════════════════════════ */
 const BodyInsights = () => {
   const navigate = useNavigate();
   const [viewLevel, setViewLevel] = useState('body');
@@ -1043,7 +1043,7 @@ const BodyInsights = () => {
               </motion.div>
             ) : (
               <motion.div key="empty" className="bi-empty-state" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                <div className="bi-empty-icon">ðŸ«€</div>
+                <div className="bi-empty-icon">🫁</div>
                 <h2 className="bi-empty-title">Explore the Body</h2>
                 <p className="bi-empty-desc">
                   Rotate the real 3D anatomy model. Click any body part, or use the region buttons above to zoom in and explore organs.

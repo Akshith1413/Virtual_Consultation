@@ -58,7 +58,7 @@ export default function VideoCallRoom() {
           >
             <div className="precall-card">
               <div style={{ width: 140, height: 140, margin: '0 auto 24px', borderRadius: '50%', background: '#1e293b', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                {isVideoOff ? <VideoOff size={40} color="#64748b" /> : <div style={{ fontSize: 60 }}>ðŸ‘¤</div>}
+                {isVideoOff ? <VideoOff size={40} color="#64748b" /> : <div style={{ fontSize: 60 }}>👤</div>}
                 {!isVideoOff && <div className="camera-scanner" />}
               </div>
               <h2 style={{ fontFamily: "'Outfit', sans-serif", margin: '0 0 8px', fontSize: 28, color: '#f8fafc' }}>Ready to join?</h2>
@@ -161,7 +161,7 @@ export default function VideoCallRoom() {
               transition={{ delay: 0.4, type: 'spring' }}
               className="video-self-preview"
             >
-              {isVideoOff ? <VideoOff size={40} color="#64748b" /> : 'ðŸ‘¤'}
+              {isVideoOff ? <VideoOff size={40} color="#64748b" /> : '👤'}
             </motion.div>
 
             <motion.div 

@@ -5,10 +5,10 @@ import { ArrowLeft, Paperclip, Smile, Send, Phone, Video, MoreVertical, Image, C
 import '../styles/Communication.css';
 
 const SUGGESTED_REPLIES = [
-  'ðŸ“‹ Share my symptoms',
-  'ðŸ“… Reschedule appointment',
-  'ðŸ’Š Ask about medication',
-  'ðŸ§ª Request lab results',
+  '📅‹ Share my symptoms',
+  '📅… Reschedule appointment',
+  '💊 Ask about medication',
+  '🩺ª Request lab results',
   'â“ General question',
   'ðŸ™ Thank you, Doctor',
 ];
@@ -16,7 +16,7 @@ const SUGGESTED_REPLIES = [
 const DUMMY_MESSAGES = [
   { id: 1, sender: 'doctor', text: 'Hello! Welcome to your virtual consultation. How can I help you today?', time: '10:00 AM', read: true },
   { id: 2, sender: 'user', text: 'Hi Doctor! I\'ve been having persistent headaches for the past week.', time: '10:02 AM', read: true },
-  { id: 3, sender: 'doctor', text: 'I\'m sorry to hear that. Can you describe the nature of the headaches? For example:\n\nâ€¢ Where exactly do you feel the pain?\nâ€¢ Is it constant or does it come and go?\nâ€¢ On a scale of 1-10, how severe is it?', time: '10:03 AM', read: true },
+  { id: 3, sender: 'doctor', text: 'I\'m sorry to hear that. Can you describe the nature of the headaches? For example:\n\n• Where exactly do you feel the pain?\n• Is it constant or does it come and go?\n• On a scale of 1-10, how severe is it?', time: '10:03 AM', read: true },
   { id: 4, sender: 'user', text: 'It\'s mostly on the right side, comes and goes, and I\'d say around a 6-7 in severity.', time: '10:05 AM', read: true },
   { id: 5, sender: 'doctor', text: 'Thank you for that information. Based on what you\'ve described, it could be tension-type headaches or migraines. I\'d recommend:\n\n1. **Stay hydrated** - Drink at least 8 glasses of water daily\n2. **Rest well** - Aim for 7-8 hours of sleep\n3. **Screen breaks** - Take a 5-min break every hour\n\nIf the headaches persist beyond a few more days, we should schedule an in-person visit for a thorough examination.', time: '10:07 AM', read: true },
   { id: 6, sender: 'user', text: 'That\'s very helpful, thank you! Should I take any OTC medication?', time: '10:08 AM', read: false },
@@ -101,7 +101,7 @@ export default function ChatRoom() {
             </button>
           </div>
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="approval-gate">
-            <div className="approval-gate-icon">ðŸ”’</div>
+            <div className="approval-gate-icon">🔒</div>
             <h2>Awaiting Doctor Approval</h2>
             <p>Your appointment needs to be confirmed by the doctor before you can start chatting. You'll be notified once approved.</p>
             <motion.button
@@ -187,7 +187,7 @@ export default function ChatRoom() {
                   className={`chat-bubble-row ${msg.sender === 'user' ? 'sent' : ''}`}
                 >
                   <div className="chat-bubble-avatar">
-                    {msg.sender === 'doctor' ? 'ðŸ‘©â€âš•ï¸' : 'ðŸ‘¤'}
+                    {msg.sender === 'doctor' ? 'ðŸ‘©â€âš•ï¸' : '👤'}
                   </div>
                   <div>
                     <div className="chat-bubble" dangerouslySetInnerHTML={{

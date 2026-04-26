@@ -66,7 +66,7 @@ export default function ComingSoonSection() {
       
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4">
-          Coming <span className="bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Soon</span> ðŸš€
+          Coming <span className="bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Soon</span> 🚀
         </h2>
         <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto mt-3">
           We're constantly evolving to make your health journey even smarter.

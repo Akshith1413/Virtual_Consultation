@@ -1490,7 +1490,7 @@ class AppointmentScheduling extends Component {
                                   </h3>
                                   <p className="text-gray-600 dark:text-gray-400 flex items-center gap-2 mt-1">
                                     <Stethoscope size={16} className="text-gray-500 dark:text-gray-400" />
-                                    {appointment.doctorName} â€¢ {appointment.specialty}
+                                    {appointment.doctorName} • {appointment.specialty}
                                   </p>
                                 </div>
                                 <span className={`px-3 py-1 rounded-full text-sm font-medium border ${this.getStatusColor(appointment.status)}`}>
@@ -1634,7 +1634,7 @@ class AppointmentScheduling extends Component {
                       {showReminders.map((reminder) => {
                         // Determine urgency styling
                         let urgencyClass = 'border-blue-200 bg-blue-50';
-                        let urgencyIcon = 'ðŸ“…';
+                        let urgencyIcon = '📅…';
                         let urgencyText = 'Upcoming';
 
                         if (reminder.urgency === 'today') {
@@ -1643,7 +1643,7 @@ class AppointmentScheduling extends Component {
                           urgencyText = 'Today';
                         } else if (reminder.urgency === 'urgent') {
                           urgencyClass = 'border-red-200 bg-red-50';
-                          urgencyIcon = 'ðŸ”´';
+                          urgencyIcon = '🔴';
                           urgencyText = 'Urgent';
                         }
 
@@ -1661,7 +1661,7 @@ class AppointmentScheduling extends Component {
                                     {urgencyText}
                                   </span>
                                 </div>
-                                <p className="text-gray-700 font-medium">{reminder.doctorName} â€¢ {reminder.specialty}</p>
+                                <p className="text-gray-700 font-medium">{reminder.doctorName} • {reminder.specialty}</p>
                               </div>
                               <div className="text-right">
                                 <p className="text-lg font-semibold text-gray-900">

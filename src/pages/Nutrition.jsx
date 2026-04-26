@@ -423,7 +423,7 @@ const RecipeForm = ({ onAdd, onClose, editingRecipe = null }) => {
                             {ingredient.name}
                           </div>
                           <div className="text-sm text-gray-500 dark:text-gray-400">
-                            {ingredient.brand} â€¢ {ingredient.category}
+                            {ingredient.brand} • {ingredient.category}
                           </div>
                           <div className="text-xs text-gray-400 dark:text-gray-500 mt-1">
                             {ingredient.nutrition.calories} cal per {ingredient.servingSize}{ingredient.servingUnit}
@@ -2671,7 +2671,7 @@ const NutritionTracker = () => {
                         <div className="text-xs text-gray-500 dark:text-gray-400">
                           {Math.round(item.calories * item.quantity)} cal total
                           {item.brandOwner && (
-                            <span className="ml-2">â€¢ {item.brandOwner}</span>
+                            <span className="ml-2">• {item.brandOwner}</span>
                           )}
                         </div>
                       </div>

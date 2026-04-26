@@ -1,8 +1,8 @@
-﻿# AI Integration â€” Virtual Consultation Platform
+﻿# AI Integration — Virtual Consultation Platform
 
 ## Overview
 
-Integrate **10 AI-powered healthcare features** into the existing Virtual Consultation platform using **free, open-source** AI services. The primary AI engine will be **Hugging Face Inference API** (free tier â€” no credit card needed) combined with **built-in algorithmic intelligence** for health analysis, risk scoring, and trend prediction.
+Integrate **10 AI-powered healthcare features** into the existing Virtual Consultation platform using **free, open-source** AI services. The primary AI engine will be **Hugging Face Inference API** (free tier — no credit card needed) combined with **built-in algorithmic intelligence** for health analysis, risk scoring, and trend prediction.
 
 > [!IMPORTANT]
 > All AI features use **free APIs only**. No paid services. Hugging Face free tier provides 1,000 requests/day which is more than sufficient for a development/demo project.
@@ -65,7 +65,7 @@ graph TB
 
 ## Proposed Changes
 
-### Backend â€” New Files
+### Backend — New Files
 
 ---
 
@@ -73,16 +73,16 @@ graph TB
 
 All AI API endpoints, mounted as `/api/ai/*`:
 
-- `POST /api/ai/chat` â€” AI Health Chat (conversational health assistant)
-- `POST /api/ai/symptom-check` â€” Symptom analysis with NER entity extraction
-- `GET /api/ai/health-risk` â€” Personalized health risk assessment
-- `POST /api/ai/supplement-interactions` â€” AI drug/supplement interaction checker
-- `POST /api/ai/analyze-nutrition` â€” Natural language food â†’ nutrition data
-- `POST /api/ai/mood-analysis` â€” Sentiment analysis on mood journal text
-- `GET /api/ai/health-insights` â€” Weekly AI-generated health report
-- `POST /api/ai/appointment-prescreen` â€” Symptom â†’ doctor specialty recommendation
-- `GET /api/ai/body-insights/:organ` â€” Organ-specific health risk analysis
-- `GET /api/ai/group-recommendations` â€” AI-powered health group suggestions
+- `POST /api/ai/chat` — AI Health Chat (conversational health assistant)
+- `POST /api/ai/symptom-check` — Symptom analysis with NER entity extraction
+- `GET /api/ai/health-risk` — Personalized health risk assessment
+- `POST /api/ai/supplement-interactions` — AI drug/supplement interaction checker
+- `POST /api/ai/analyze-nutrition` — Natural language food â†’ nutrition data
+- `POST /api/ai/mood-analysis` — Sentiment analysis on mood journal text
+- `GET /api/ai/health-insights` — Weekly AI-generated health report
+- `POST /api/ai/appointment-prescreen` — Symptom â†’ doctor specialty recommendation
+- `GET /api/ai/body-insights/:organ` — Organ-specific health risk analysis
+- `GET /api/ai/group-recommendations` — AI-powered health group suggestions
 
 ---
 
@@ -90,13 +90,13 @@ All AI API endpoints, mounted as `/api/ai/*`:
 
 Core AI processing module containing:
 
-- **`callHuggingFace(model, inputs)`** â€” Unified Hugging Face API wrapper with retry logic + rate limiting
-- **`extractMedicalEntities(text)`** â€” NER pipeline for diseases, symptoms, drugs, anatomy
-- **`generateHealthResponse(context, question)`** â€” Medical chat response generation
-- **`analyzeSentiment(text)`** â€” Mood/sentiment scoring
-- **`calculateHealthRisk(profile, metrics)`** â€” Algorithmic risk scoring engine
-- **`correlateHealthData(metrics, timeRange)`** â€” Cross-metric trend analysis
-- **`analyzeNutritionText(text)`** â€” Food description â†’ macro extraction
+- **`callHuggingFace(model, inputs)`** — Unified Hugging Face API wrapper with retry logic + rate limiting
+- **`extractMedicalEntities(text)`** — NER pipeline for diseases, symptoms, drugs, anatomy
+- **`generateHealthResponse(context, question)`** — Medical chat response generation
+- **`analyzeSentiment(text)`** — Mood/sentiment scoring
+- **`calculateHealthRisk(profile, metrics)`** — Algorithmic risk scoring engine
+- **`correlateHealthData(metrics, timeRange)`** — Cross-metric trend analysis
+- **`analyzeNutritionText(text)`** — Food description â†’ macro extraction
 
 ---
 
@@ -129,7 +129,7 @@ Add:
 HUGGINGFACE_API_KEY=hf_xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 > [!NOTE]
-> Hugging Face API key is **free** â€” just sign up at huggingface.co. Free tier gives 1,000 requests/day.
+> Hugging Face API key is **free** — just sign up at huggingface.co. Free tier gives 1,000 requests/day.
 
 ---
 
@@ -140,7 +140,7 @@ Add dependency:
 
 ---
 
-### Frontend â€” New Files
+### Frontend — New Files
 
 ---
 
@@ -148,12 +148,12 @@ Add dependency:
 
 Full-page AI Health Center with premium glassmorphism design containing:
 
-1. **AI Chat Panel** â€” Full conversational health assistant with typing indicators, message bubbles, context-aware responses
-2. **Symptom Checker Card** â€” Input symptoms â†’ get NER entities + risk level + recommended specialty
-3. **Health Risk Dashboard** â€” Visual risk gauges for cardiovascular, metabolic, respiratory, mental health
-4. **Weekly AI Insights** â€” Auto-generated health report with charts + recommendations
-5. **Nutrition Analyzer** â€” Type food description â†’ get instant macro breakdown
-6. **Mood Analysis** â€” Journal entry with sentiment scoring + trend visualization
+1. **AI Chat Panel** — Full conversational health assistant with typing indicators, message bubbles, context-aware responses
+2. **Symptom Checker Card** — Input symptoms â†’ get NER entities + risk level + recommended specialty
+3. **Health Risk Dashboard** — Visual risk gauges for cardiovascular, metabolic, respiratory, mental health
+4. **Weekly AI Insights** — Auto-generated health report with charts + recommendations
+5. **Nutrition Analyzer** — Type food description â†’ get instant macro breakdown
+6. **Mood Analysis** — Journal entry with sentiment scoring + trend visualization
 
 ---
 
@@ -183,7 +183,7 @@ Premium styling for the floating chat widget with glassmorphism, animations
 
 ---
 
-### Frontend â€” Modified Files
+### Frontend — Modified Files
 
 ---
 
@@ -264,11 +264,11 @@ User â†’ types question â†’ Backend â†’ Hugging Face BioGPT â†
 ### Feature 3: Health Risk Predictor
 
 Algorithmic scoring using WHO/medical guidelines:
-- **Cardiovascular Risk** â€” from BMI, age, smoking, blood pressure, cholesterol
-- **Metabolic Risk** â€” from BMI, activity level, diet, blood sugar indicators
-- **Respiratory Risk** â€” from smoking status, age, conditions
-- **Mental Health Risk** â€” from mood scores, sleep patterns, stress levels
-- **Nutritional Risk** â€” from diet data, calorie intake, hydration
+- **Cardiovascular Risk** — from BMI, age, smoking, blood pressure, cholesterol
+- **Metabolic Risk** — from BMI, activity level, diet, blood sugar indicators
+- **Respiratory Risk** — from smoking status, age, conditions
+- **Mental Health Risk** — from mood scores, sleep patterns, stress levels
+- **Nutritional Risk** — from diet data, calorie intake, hydration
 
 ### Feature 4: Smart Supplement Interactions (AI-Enhanced)
 

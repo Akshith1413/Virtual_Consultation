@@ -93,7 +93,7 @@ export default function CoreFeaturesSection() {
             Core <span className="bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Features</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
-            Everything you need to measure, improve and secure your health â€” built for real life and real results.
+            Everything you need to measure, improve and secure your health — built for real life and real results.
           </p>
         </div>
 
