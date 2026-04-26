@@ -1639,7 +1639,7 @@ class AppointmentScheduling extends Component {
 
                         if (reminder.urgency === 'today') {
                           urgencyClass = 'border-orange-200 bg-orange-50';
-                          urgencyIcon = 'âš ï¸';
+                          urgencyIcon = '⚠️';
                           urgencyText = 'Today';
                         } else if (reminder.urgency === 'urgent') {
                           urgencyClass = 'border-red-200 bg-red-50';

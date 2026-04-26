@@ -9,10 +9,10 @@ import { motion, AnimatePresence } from 'framer-motion';
  */
 
 const TESTIMONIALS = [
-  { name: 'Sarah K.', role: 'Fitness Enthusiast', text: 'Tracking my health has never been this immersive. The 3D visualizations make data feel alive.', avatar: 'ðŸ‘©â€âš•ï¸' },
-  { name: 'Dr. Patel', role: 'Cardiologist', text: 'I recommend this to my patients. The organ-level insights are remarkably intuitive.', avatar: 'ðŸ‘¨â€âš•' },
-  { name: 'Marcus J.', role: 'Working Professional', text: 'Finally a health app that makes me want to check my metrics every day. Beautiful and functional.', avatar: 'ðŸ‘¨â€ðŸ’¼' },
-  { name: 'Lisa Chen', role: 'Nutritionist', text: 'The meal tracking and nutrition insights are comprehensive. My clients love the visual approach.', avatar: 'ðŸ‘©â€ðŸ³' },
+  { name: 'Sarah K.', role: 'Fitness Enthusiast', text: 'Tracking my health has never been this immersive. The 3D visualizations make data feel alive.', avatar: '👩‍⚕️' },
+  { name: 'Dr. Patel', role: 'Cardiologist', text: 'I recommend this to my patients. The organ-level insights are remarkably intuitive.', avatar: '👨‍⚕' },
+  { name: 'Marcus J.', role: 'Working Professional', text: 'Finally a health app that makes me want to check my metrics every day. Beautiful and functional.', avatar: '👨‍💼' },
+  { name: 'Lisa Chen', role: 'Nutritionist', text: 'The meal tracking and nutrition insights are comprehensive. My clients love the visual approach.', avatar: '👩‍🍳' },
 ];
 
 function TestimonialCard({ testimonial, index, total, isActive }) {
@@ -69,7 +69,7 @@ function TestimonialCard({ testimonial, index, total, isActive }) {
               <p className="text-gray-300 text-xs leading-relaxed italic">"{testimonial.text}"</p>
               <div className="mt-2 flex gap-0.5">
                 {[1, 2, 3, 4, 5].map(s => (
-                  <span key={s} className="text-yellow-400 text-xs">â˜…</span>
+                  <span key={s} className="text-yellow-400 text-xs">★</span>
                 ))}
               </div>
             </motion.div>

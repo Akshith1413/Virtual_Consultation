@@ -1,4 +1,4 @@
-﻿# AI Integration — Virtual Consultation Platform
+# AI Integration — Virtual Consultation Platform
 
 ## Overview
 
@@ -57,9 +57,9 @@ graph TB
 | 5 | **AI Nutrition Analyzer** | Text-to-nutrition extraction | Hugging Face NER + USDA API |
 | 6 | **Mental Health Mood Analyzer** | Sentiment analysis + patterns | Hugging Face (sentiment models) |
 | 7 | **AI Health Insights Engine** | Data correlation + trends | Built-in analytics engine |
-| 8 | **Smart Appointment Pre-screening** | Symptom â†’ specialty matching | Hugging Face NER + rules |
+| 8 | **Smart Appointment Pre-screening** | Symptom → specialty matching | Hugging Face NER + rules |
 | 9 | **AI Body Insights** | Organ risk from health data | Built-in + medical KB |
-| 10 | **AI Group Recommendations** | Profile â†’ group matching NLP | Built-in similarity scoring |
+| 10 | **AI Group Recommendations** | Profile → group matching NLP | Built-in similarity scoring |
 
 ---
 
@@ -77,10 +77,10 @@ All AI API endpoints, mounted as `/api/ai/*`:
 - `POST /api/ai/symptom-check` — Symptom analysis with NER entity extraction
 - `GET /api/ai/health-risk` — Personalized health risk assessment
 - `POST /api/ai/supplement-interactions` — AI drug/supplement interaction checker
-- `POST /api/ai/analyze-nutrition` — Natural language food â†’ nutrition data
+- `POST /api/ai/analyze-nutrition` — Natural language food → nutrition data
 - `POST /api/ai/mood-analysis` — Sentiment analysis on mood journal text
 - `GET /api/ai/health-insights` — Weekly AI-generated health report
-- `POST /api/ai/appointment-prescreen` — Symptom â†’ doctor specialty recommendation
+- `POST /api/ai/appointment-prescreen` — Symptom → doctor specialty recommendation
 - `GET /api/ai/body-insights/:organ` — Organ-specific health risk analysis
 - `GET /api/ai/group-recommendations` — AI-powered health group suggestions
 
@@ -96,7 +96,7 @@ Core AI processing module containing:
 - **`analyzeSentiment(text)`** — Mood/sentiment scoring
 - **`calculateHealthRisk(profile, metrics)`** — Algorithmic risk scoring engine
 - **`correlateHealthData(metrics, timeRange)`** — Cross-metric trend analysis
-- **`analyzeNutritionText(text)`** — Food description â†’ macro extraction
+- **`analyzeNutritionText(text)`** — Food description → macro extraction
 
 ---
 
@@ -105,9 +105,9 @@ Core AI processing module containing:
 Comprehensive medical knowledge base (no external API needed):
 
 - **Drug/supplement interaction database** (500+ known interactions)
-- **Symptom â†’ condition mapping** (100+ conditions)
-- **Symptom â†’ specialty routing** (12 specialties)
-- **Organ â†’ risk factor mapping** (for Body Insights)
+- **Symptom → condition mapping** (100+ conditions)
+- **Symptom → specialty routing** (12 specialties)
+- **Organ → risk factor mapping** (for Body Insights)
 - **BMI/vitals risk thresholds** (WHO guidelines)
 - **Nutrition RDA values** (by age/gender)
 
@@ -149,10 +149,10 @@ Add dependency:
 Full-page AI Health Center with premium glassmorphism design containing:
 
 1. **AI Chat Panel** — Full conversational health assistant with typing indicators, message bubbles, context-aware responses
-2. **Symptom Checker Card** — Input symptoms â†’ get NER entities + risk level + recommended specialty
+2. **Symptom Checker Card** — Input symptoms → get NER entities + risk level + recommended specialty
 3. **Health Risk Dashboard** — Visual risk gauges for cardiovascular, metabolic, respiratory, mental health
 4. **Weekly AI Insights** — Auto-generated health report with charts + recommendations
-5. **Nutrition Analyzer** — Type food description â†’ get instant macro breakdown
+5. **Nutrition Analyzer** — Type food description → get instant macro breakdown
 6. **Mood Analysis** — Journal entry with sentiment scoring + trend visualization
 
 ---
@@ -189,7 +189,7 @@ Premium styling for the floating chat widget with glassmorphism, animations
 
 #### [MODIFY] [AppRoutes.jsx](file:///c:/virtualConsultation/src/routes/AppRoutes.jsx)
 
-- Add route: `/ai-hub` â†’ `<AIHub />`
+- Add route: `/ai-hub` → `<AIHub />`
 
 #### [MODIFY] [App.jsx](file:///c:/virtualConsultation/src/App.jsx)
 
@@ -221,7 +221,7 @@ Premium styling for the floating chat widget with glassmorphism, animations
 
 #### [MODIFY] [Appointments.jsx](file:///c:/virtualConsultation/src/pages/Appointments.jsx)
 
-- Add AI pre-screening before booking (symptom â†’ specialty recommendation)
+- Add AI pre-screening before booking (symptom → specialty recommendation)
 
 #### [MODIFY] [Groups.jsx](file:///c:/virtualConsultation/src/pages/Groups.jsx)
 
@@ -238,7 +238,7 @@ Premium styling for the floating chat widget with glassmorphism, animations
 ### Feature 1: AI Health Chat Assistant
 
 ```
-User â†’ types question â†’ Backend â†’ Hugging Face BioGPT â†’ Response
+User → types question → Backend → Hugging Face BioGPT → Response
                        â†“
               User's health profile injected as context
 ```
@@ -306,7 +306,7 @@ Weekly auto-generated report:
 
 Before booking an appointment:
 1. User describes their concern
-2. AI extracts symptoms â†’ maps to specialty
+2. AI extracts symptoms → maps to specialty
 3. Suggests appropriate doctor type and urgency
 4. Pre-fills appointment form with detected info
 
@@ -315,12 +315,12 @@ Before booking an appointment:
 Enhances the existing 3D Body Insights page:
 - When user clicks an organ, shows AI-generated risk assessment
 - Based on: conditions, medications, lifestyle factors, family history
-- Example: Clicking "Liver" â†’ shows risks based on alcohol consumption, medications
+- Example: Clicking "Liver" → shows risks based on alcohol consumption, medications
 
 ### Feature 10: AI Group Recommendations
 
 - NLP-based matching of user's health profile to group descriptions
-- Extracts conditions/goals from profile â†’ finds semantically similar groups
+- Extracts conditions/goals from profile → finds semantically similar groups
 - Weighted scoring: condition match > goal match > age match
 
 ---

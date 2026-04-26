@@ -23,14 +23,14 @@ const Groups = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   const categories = [
-    { value: 'chronic_diseases', label: 'Chronic Diseases', icon: 'ðŸ¥' },
+    { value: 'chronic_diseases', label: 'Chronic Diseases', icon: '🏥' },
     { value: 'mental_health', label: 'Mental Health', icon: '🧠' },
     { value: 'fitness_goals', label: 'Fitness Goals', icon: '💪' },
     { value: 'diet_nutrition', label: 'Diet & Nutrition', icon: '🥗' },
-    { value: 'recovery_support', label: 'Recovery Support', icon: 'ðŸŒ±' },
-    { value: 'preventive_care', label: 'Preventive Care', icon: 'ðŸ›¡ï¸' },
-    { value: 'family_health', icon: 'ðŸ‘¨â€ðŸ‘©â€ðŸ‘§â€ðŸ‘¦', label: 'Family Health' },
-    { value: 'other', label: 'Other', icon: 'ðŸ”—' }
+    { value: 'recovery_support', label: 'Recovery Support', icon: '🌱' },
+    { value: 'preventive_care', label: 'Preventive Care', icon: '🛡️' },
+    { value: 'family_health', icon: '👨‍👩‍👧‍👦', label: 'Family Health' },
+    { value: 'other', label: 'Other', icon: '🔗' }
   ];
 
   const fetchGroups = useCallback(async () => {
@@ -122,7 +122,7 @@ const Groups = () => {
         className="relative group bg-white dark:bg-slate-800 rounded-[2.5rem] p-8 shadow-[0_20px_50px_rgba(0,0,0,0.04)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-gray-100 dark:border-slate-700 hover:border-indigo-500/50 transition-all overflow-hidden"
       >
         <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-30 transition-all transform group-hover:scale-125 group-hover:rotate-12">
-            <span className="text-7xl">{cat?.icon || 'ðŸ¤'}</span>
+            <span className="text-7xl">{cat?.icon || '🤝'}</span>
         </div>
 
         <div className="flex flex-wrap gap-2 mb-6">
@@ -284,7 +284,7 @@ const Groups = () => {
                 className="flex flex-col items-center justify-center py-20 text-center"
             >
                 <div className="w-24 h-24 rounded-full bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-4xl mb-6">
-                    ðŸï¸
+                    🏝️
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">No Communities Found</h3>
                 <p className="text-gray-500 dark:text-gray-400 max-w-sm">

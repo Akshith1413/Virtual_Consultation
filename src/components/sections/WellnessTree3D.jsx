@@ -20,7 +20,7 @@ function Branch({ start, length, angle, angleZ, depth, maxDepth, healthScore }) 
   // Branch color: brown for trunk, green transitioning for higher branches
   const color = depth < 2 ? '#8b4513' : depth < 3 ? '#6b8e23' : '#228b22';
 
-  // Scaling factor based on health score (0â€“100)
+  // Scaling factor based on health score (0–100)
   const scaleFactor = 0.5 + (healthScore / 100) * 0.5;
 
   // Generate child branches

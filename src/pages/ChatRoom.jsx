@@ -10,7 +10,7 @@ const SUGGESTED_REPLIES = [
   '💊 Ask about medication',
   '🩺ª Request lab results',
   'â“ General question',
-  'ðŸ™ Thank you, Doctor',
+  '🙏 Thank you, Doctor',
 ];
 
 const DUMMY_MESSAGES = [
@@ -137,7 +137,7 @@ export default function ChatRoom() {
         <button className="comm-back-btn" onClick={() => navigate(-1)} style={{ margin: 0, padding: '10px 14px', border: 'none', background: 'transparent' }}>
           <ArrowLeft size={20} />
         </button>
-        <div className="doctor-avatar" style={{ width: '44px', height: '44px', borderRadius: '14px' }}>ðŸ‘©â€âš•ï¸</div>
+        <div className="doctor-avatar" style={{ width: '44px', height: '44px', borderRadius: '14px' }}>👩‍⚕️</div>
         <div className="doctor-info" style={{ flex: 1 }}>
           <h3 style={{ fontSize: '18px', margin: 0 }}>{doctorName}</h3>
           <span>Online</span>
@@ -187,7 +187,7 @@ export default function ChatRoom() {
                   className={`chat-bubble-row ${msg.sender === 'user' ? 'sent' : ''}`}
                 >
                   <div className="chat-bubble-avatar">
-                    {msg.sender === 'doctor' ? 'ðŸ‘©â€âš•ï¸' : '👤'}
+                    {msg.sender === 'doctor' ? '👩‍⚕️' : '👤'}
                   </div>
                   <div>
                     <div className="chat-bubble" dangerouslySetInnerHTML={{
@@ -217,7 +217,7 @@ export default function ChatRoom() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   className="chat-bubble-row"
                 >
-                  <div className="chat-bubble-avatar">ðŸ‘©â€âš•ï¸</div>
+                  <div className="chat-bubble-avatar">👩‍⚕️</div>
                   <div className="chat-bubble" style={{ display: 'flex', gap: 6, padding: '16px 20px' }}>
                     {[0, 1, 2].map(i => (
                       <motion.span

@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
-/* â”€â”€â”€ Global & Mesh Background â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Global & Mesh Background ──────────────────────────────── */
 .comm-page {
   min-height: 100vh;
   background-color: #030014;
@@ -59,7 +59,7 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
-/* â”€â”€â”€ Approval Gate â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Approval Gate ─────────────────────────────────────────── */
 .approval-gate {
   display: flex;
   flex-direction: column;
@@ -104,7 +104,7 @@
   margin: 0;
 }
 
-/* â”€â”€â”€ Back Button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Back Button ───────────────────────────────────────────── */
 .comm-back-btn {
   display: inline-flex;
   align-items: center;
@@ -131,7 +131,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* â”€â”€â”€ Doctor Header Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Doctor Header Card ────────────────────────────────────── */
 .doctor-header {
   display: flex;
   align-items: center;
@@ -188,7 +188,7 @@
   animation: comm-pulse-dot 2s infinite;
 }
 
-/* â”€â”€â”€ Chat Styles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Chat Styles ───────────────────────────────────────────── */
 .chat-container {
   display: flex;
   flex-direction: column;
@@ -425,7 +425,7 @@
   cursor: not-allowed; 
 }
 
-/* â”€â”€â”€ Shared Call Styles (Voice + Video) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Shared Call Styles (Voice + Video) ────────────────────── */
 .call-screen {
   display: flex;
   flex-direction: column;
@@ -572,7 +572,7 @@
   box-shadow: 0 15px 40px rgba(225, 29, 72, 0.6);
 }
 
-/* â”€â”€â”€ Voice specific - Circular Waveform â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Voice specific - Circular Waveform ────────────────────── */
 .voice-visualizer-container {
   position: relative;
   width: 200px;
@@ -597,7 +597,7 @@
   100% { transform: scale(1.5); opacity: 0.2; }
 }
 
-/* â”€â”€â”€ Video Call Specific â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Video Call Specific ───────────────────────────────────── */
 .video-container {
   position: fixed;
   inset: 0;
@@ -705,7 +705,7 @@
   animation: comm-scan 3s ease-in-out infinite alternate;
 }
 
-/* â”€â”€â”€ Pre-call Screen â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Pre-call Screen ───────────────────────────────────────── */
 .precall-screen {
   display: flex;
   flex-direction: column;
@@ -815,7 +815,7 @@
 
 .precall-start-btn:hover { transform: translateY(-4px) scale(1.02); }
 
-/* â”€â”€â”€ History Page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── History Page ──────────────────────────────────────────── */
 .history-container {
   max-width: 900px;
   margin: 0 auto;
@@ -888,7 +888,7 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* â”€â”€â”€ Animations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Animations ────────────────────────────────────────────── */
 @keyframes comm-mesh-float {
   0% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(5%, 5%) scale(1.1); }
@@ -921,7 +921,7 @@
   100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-/* â”€â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Responsive ────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .chat-bubble-row { max-width: 90%; }
   .video-self-preview { width: 120px; bottom: 100px; right: 16px; }

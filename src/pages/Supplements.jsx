@@ -698,7 +698,7 @@ const SupplementManagementSystem = () => {
         // Get doses per day based on frequency
         const dosesPerDay = getDosesPerDay(supp.frequency);
 
-        // Calculate daily cost (cost per serving Ãƒ— doses per day)
+        // Calculate daily cost (cost per serving × doses per day)
         const dailyCost = costPerServing * dosesPerDay;
 
         return {

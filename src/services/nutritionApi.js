@@ -952,7 +952,7 @@ export const apiHealthMonitor = {
 export const apiDebug = {
   // Test nutritional goals endpoint
   testNutritionalGoals: async () => {
-    console.group('ðŸ”§ Nutritional Goals API Test');
+    console.group('📧 Nutritional Goals API Test');
     try {
       const token = TokenManager.getToken();
       console.log('Token available:', !!token);
@@ -970,13 +970,13 @@ export const apiDebug = {
   // Clear all caches
   clearCache: () => {
     apiCache.clear();
-    console.log('ðŸ—‘ï¸ API cache cleared');
+    console.log('🗑️ API cache cleared');
   },
 
   // Check token status
   checkToken: () => {
     const payload = TokenManager.getTokenPayload();
-    console.log('ðŸ” Token Status:', {
+    console.log('📐 Token Status:', {
       exists: !!TokenManager.getToken(),
       valid: TokenManager.validateToken(),
       payload: payload,

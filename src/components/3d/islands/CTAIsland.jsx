@@ -204,7 +204,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                   className="bg-red-500/5 backdrop-blur-xl rounded-[0.75rem] p-3 border border-red-500/20 text-left"
                 >
                   <h3 className="text-[11px] font-black text-red-400 mb-2 flex items-center gap-2">
-                    <span className="w-4 h-4 rounded-full bg-red-500/20 flex items-center justify-center text-[7px]">âœ•</span>
+                    <span className="w-4 h-4 rounded-full bg-red-500/20 flex items-center justify-center text-[7px]">✕</span>
                     The Problem
                   </h3>
                   <ul className="space-y-1.5">
@@ -230,7 +230,7 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
                   className="bg-emerald-500/5 backdrop-blur-xl rounded-[0.75rem] p-3 border border-emerald-500/20 text-left"
                 >
                   <h3 className="text-[11px] font-black text-emerald-400 mb-2 flex items-center gap-2">
-                    <span className="w-4 h-4 rounded-full bg-emerald-500/20 flex items-center justify-center text-[7px]">âœ“</span>
+                    <span className="w-4 h-4 rounded-full bg-emerald-500/20 flex items-center justify-center text-[7px]">✓</span>
                     Our Solution
                   </h3>
                   <ul className="space-y-1.5">

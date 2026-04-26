@@ -1,4 +1,4 @@
-﻿import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Html } from '@react-three/drei';
@@ -65,12 +65,12 @@ function BloodFlowConnections() {
     const data = [];
     // Blood flow paths between organ positions
     const paths = [
-      { from: [0, 1.5, 0], to: [0, 0.5, 0.3] },   // brain â†’ heart
-      { from: [0, 0.5, 0.3], to: [-0.4, 0.5, 0.2] }, // heart â†’ left lung
-      { from: [0, 0.5, 0.3], to: [0.4, 0.5, 0.2] },  // heart â†’ right lung
-      { from: [0, 0.5, 0.3], to: [0, -0.5, 0.2] },   // heart â†’ stomach
-      { from: [0, -0.5, 0.2], to: [-0.5, -1.0, 0.1] }, // stomach â†’ left kidney
-      { from: [0, -0.5, 0.2], to: [0.5, -1.0, 0.1] },  // stomach â†’ right kidney
+      { from: [0, 1.5, 0], to: [0, 0.5, 0.3] },   // brain → heart
+      { from: [0, 0.5, 0.3], to: [-0.4, 0.5, 0.2] }, // heart → left lung
+      { from: [0, 0.5, 0.3], to: [0.4, 0.5, 0.2] },  // heart → right lung
+      { from: [0, 0.5, 0.3], to: [0, -0.5, 0.2] },   // heart → stomach
+      { from: [0, -0.5, 0.2], to: [-0.5, -1.0, 0.1] }, // stomach → left kidney
+      { from: [0, -0.5, 0.2], to: [0.5, -1.0, 0.1] },  // stomach → right kidney
     ];
 
     for (let i = 0; i < count; i++) {

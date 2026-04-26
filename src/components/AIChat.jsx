@@ -4,12 +4,12 @@ import { sendChatMessage } from '../services/aiService';
 import '../styles/AIChat.css';
 
 const QUICK_ACTIONS = [
-  { label: 'ðŸ” Check symptoms', prompt: 'I want to check my symptoms' },
+  { label: '📍 Check symptoms', prompt: 'I want to check my symptoms' },
   { label: '🥗 Diet advice', prompt: 'Give me personalized diet advice' },
-  { label: 'ðŸ˜´ Sleep tips', prompt: 'How can I improve my sleep?' },
+  { label: '😴 Sleep tips', prompt: 'How can I improve my sleep?' },
   { label: '💊 Supplements', prompt: 'What supplements should I consider?' },
   { label: '🧠 Stress help', prompt: 'I need help managing stress' },
-  { label: 'ðŸ‹ï¸ Exercise', prompt: 'Recommend an exercise routine for me' },
+  { label: '🏋️ Exercise', prompt: 'Recommend an exercise routine for me' },
 ];
 
 export default function AIChat() {
@@ -88,7 +88,7 @@ export default function AIChat() {
       console.error('Chat error:', err);
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: 'âš ï¸ Sorry, I\'m temporarily unavailable. Please try again in a moment.\n\n*If this persists, the AI service may be starting up.*',
+        content: '⚠️ Sorry, I\'m temporarily unavailable. Please try again in a moment.\n\n*If this persists, the AI service may be starting up.*',
         time: new Date()
       }]);
     } finally {
@@ -160,9 +160,9 @@ export default function AIChat() {
                 onClick={() => { setMessages([]); setSessionId(null); }}
                 title="Clear chat"
               >
-                ðŸ—‘ï¸
+                🗑️
               </button>
-              <button onClick={() => setIsOpen(false)} title="Close">âœ•</button>
+              <button onClick={() => setIsOpen(false)} title="Close">✕</button>
             </div>
           </div>
 

@@ -152,7 +152,7 @@ export default function KidneyModel({
               className="bg-slate-900/90 backdrop-blur-xl rounded-2xl p-4 border border-emerald-500/30 shadow-2xl shadow-emerald-500/20 min-w-[200px]"
               style={{ pointerEvents: 'none' }}
             >
-              <h4 className="text-emerald-400 font-bold text-sm mb-2">ðŸ’§ Kidney Health</h4>
+              <h4 className="text-emerald-400 font-bold text-sm mb-2">💧 Kidney Health</h4>
               {Object.entries(healthData).map(([key, value]) => (
                 <div key={key} className="flex justify-between text-xs py-1 border-b border-slate-700/50 last:border-0">
                   <span className="text-gray-400 capitalize">{key}</span>

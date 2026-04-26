@@ -113,7 +113,7 @@ export default function VideoCallRoom() {
                   <div className="call-pulse-ring" />
                   <div className="call-pulse-ring" />
                   <div className="call-pulse-ring" />
-                  <div className="call-avatar">ðŸ‘©â€âš•ï¸</div>
+                  <div className="call-avatar">👩‍⚕️</div>
                 </div>
                 <h2 className="call-doctor-name" style={{ marginTop: 40 }}>{doctorName}</h2>
                 <div className="call-status" style={{ marginTop: 16 }}>Connecting...</div>
@@ -131,7 +131,7 @@ export default function VideoCallRoom() {
           >
             <div className="video-main">
               {/* Main Video (Doctor) */}
-              <div style={{ fontSize: 160, filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.5))' }}>ðŸ‘©â€âš•ï¸</div>
+              <div style={{ fontSize: 160, filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.5))' }}>👩‍⚕️</div>
             </div>
 
             <motion.div 

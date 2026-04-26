@@ -733,7 +733,7 @@ const HealthProfile = () => {
                             onClick={() => removeCondition(index)}
                             className="ml-1.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-indigo-400 hover:bg-indigo-200 hover:text-indigo-500 dark:hover:bg-indigo-800 dark:hover:text-indigo-300 transition-colors duration-150"
                           >
-                            Ã—
+                            ×
                           </button>
                         </motion.span>
                       ))}
@@ -775,7 +775,7 @@ const HealthProfile = () => {
                             onClick={() => removeAllergy(index)}
                             className="ml-1.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-red-400 hover:bg-red-200 hover:text-red-500 dark:hover:bg-red-800 dark:hover:text-red-300 transition-colors duration-150"
                           >
-                            Ã—
+                            ×
                           </button>
                         </motion.span>
                       ))}

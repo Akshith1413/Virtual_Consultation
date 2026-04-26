@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useCallback, Suspense, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, Suspense, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { Stars, Preload } from '@react-three/drei';

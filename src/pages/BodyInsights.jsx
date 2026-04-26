@@ -17,7 +17,7 @@ import '../styles/BodyInsights.css';
 const MODEL_URL = '/models/body.glb';
 const DRACO_PATH = '/draco/';
 
-/* Map anatomical mesh names â†’ our body regions.
+/* Map anatomical mesh names → our body regions.
    The Z-Anatomy model uses descriptive names like "Pectoralis Major",
    "Biceps Brachii", "Skull", etc. We group them by body region. */
 const classifyMesh = (name) => {
@@ -127,7 +127,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Migraine', color: '#f87171' }, { name: 'Epilepsy', color: '#fbbf24' }, { name: 'Stroke', color: '#ef4444' }, { name: "Alzheimer's", color: '#a78bfa' }, { name: 'Concussion', color: '#fb923c' }, { name: 'Brain Fog', color: '#94a3b8' }],
   },
   eyes: {
-    name: 'Eyes', emoji: 'ðŸ‘ï¸', specialty: 'Ophthalmology',
+    name: 'Eyes', emoji: '👁️', specialty: 'Ophthalmology',
     overview: 'Each eye has 2 million working parts, processes 36K bits of info per hour, and can distinguish 10 million colors.',
     metrics: [{ value: '2M', label: 'Parts' }, { value: '576', label: 'Megapixels' }, { value: '10M', label: 'Colors' }],
     doctors: [
@@ -138,7 +138,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Myopia', color: '#60a5fa' }, { name: 'Glaucoma', color: '#ef4444' }, { name: 'Cataracts', color: '#94a3b8' }, { name: 'Dry Eye', color: '#fbbf24' }, { name: 'Macular Degen.', color: '#a78bfa' }, { name: 'Conjunctivitis', color: '#f87171' }],
   },
   heart: {
-    name: 'Heart', emoji: 'â¤ï¸', specialty: 'Cardiology',
+    name: 'Heart', emoji: '❤️', specialty: 'Cardiology',
     overview: 'Beats 100,000 times daily, pumps 2,000 gallons of blood through 60,000 miles of vessels.',
     metrics: [{ value: '100K', label: 'Beats/Day' }, { value: '2K', label: 'Gallons/Day' }, { value: '60K', label: 'Miles' }],
     doctors: [
@@ -149,9 +149,9 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Heart Attack', color: '#ef4444' }, { name: 'Arrhythmia', color: '#f59e0b' }, { name: 'Heart Failure', color: '#dc2626' }, { name: 'Hypertension', color: '#f87171' }, { name: 'Valve Disease', color: '#a78bfa' }, { name: 'Coronary Artery', color: '#fb923c' }],
   },
   lungs: {
-    name: 'Lungs', emoji: '🫁', specialty: 'Pulmonology',
-    overview: '300 million alveoli, 70mÂ² surface area. 20,000 breaths daily processing 2,100 gallons of air.',
-    metrics: [{ value: '300M', label: 'Alveoli' }, { value: '20K', label: 'Breaths/Day' }, { value: '70mÂ²', label: 'Surface' }],
+    name: 'Lungs', emoji: '🫁', specialty: 'Pulmonology',
+    overview: '300 million alveoli, 70m² surface area. 20,000 breaths daily processing 2,100 gallons of air.',
+    metrics: [{ value: '300M', label: 'Alveoli' }, { value: '20K', label: 'Breaths/Day' }, { value: '70m²', label: 'Surface' }],
     doctors: [
       { name: 'Dr. Robert Klein', spec: 'Pulmonologist, 19 yrs', rating: 4.8, initials: 'RK', bg: '#0ea5e9', status: 'online' },
       { name: 'Dr. Lisa Wang', spec: 'Thoracic Surgeon, 16 yrs', rating: 4.9, initials: 'LW', bg: '#06b6d4', status: 'online' },
@@ -160,7 +160,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Asthma', color: '#38bdf8' }, { name: 'COPD', color: '#fb923c' }, { name: 'Pneumonia', color: '#ef4444' }, { name: 'Bronchitis', color: '#fbbf24' }, { name: 'Lung Cancer', color: '#dc2626' }, { name: 'Sleep Apnea', color: '#a78bfa' }],
   },
   breasts: {
-    name: 'Breasts', emoji: 'ðŸŽ€', specialty: 'Gynecology & Oncology', gender: 'female',
+    name: 'Breasts', emoji: '🎀', specialty: 'Gynecology & Oncology', gender: 'female',
     overview: 'Crucial glandular tissue for regular self-examination. Seeking specialized help early is critical for symptoms like pain or lumps.',
     metrics: [{ value: 'Annual', label: 'Screening' }, { value: 'High', label: 'Treatability' }, { value: '1 in 8', label: 'Risk Factor' }],
     doctors: [
@@ -226,8 +226,8 @@ const ORGAN_DATA = {
   },
   shoulders: {
     name: 'Shoulders & Arms', emoji: '💪', specialty: 'Sports Medicine',
-    overview: 'Most mobile joint — 4 joints, 30+ muscles, 360Â° rotation. Arms contain 64 bones and hundreds of muscles.',
-    metrics: [{ value: '4', label: 'Joints' }, { value: '30+', label: 'Muscles' }, { value: '360Â°', label: 'Rotation' }],
+    overview: 'Most mobile joint — 4 joints, 30+ muscles, 360° rotation. Arms contain 64 bones and hundreds of muscles.',
+    metrics: [{ value: '4', label: 'Joints' }, { value: '30+', label: 'Muscles' }, { value: '360°', label: 'Rotation' }],
     doctors: [
       { name: 'Dr. Marcus Johnson', spec: 'Sports Med, 16 yrs', rating: 4.9, initials: 'MJ', bg: '#dc2626', status: 'online' },
       { name: 'Dr. Anna Petrov', spec: 'Orthopedic, 19 yrs', rating: 4.8, initials: 'AP', bg: '#ef4444', status: 'online' },
@@ -237,7 +237,7 @@ const ORGAN_DATA = {
   },
   knees: {
     name: 'Legs & Knees', emoji: '🦵', specialty: 'Orthopedics',
-    overview: 'Largest joint bearing 6Ã— body weight. 4 major ligaments, 2 menisci. Legs contain the strongest muscles.',
+    overview: 'Largest joint bearing 6× body weight. 4 major ligaments, 2 menisci. Legs contain the strongest muscles.',
     metrics: [{ value: '6x', label: 'Force' }, { value: '4', label: 'Ligaments' }, { value: '2', label: 'Menisci' }],
     doctors: [
       { name: "Dr. Patrick O'Brien", spec: 'Knee Specialist, 21 yrs', rating: 4.9, initials: 'PO', bg: '#0891b2', status: 'online' },
@@ -268,7 +268,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Prostatitis', color: '#4f46e5' }, { name: 'BPH', color: '#3b82f6' }, { name: 'UTI', color: '#6366f1' }, { name: 'Kidney Stones', color: '#8b5cf6' }],
   },
   nose: {
-    name: 'Nose & Sinuses', emoji: 'ðŸ‘ƒ', specialty: 'Otolaryngology (ENT)',
+    name: 'Nose & Sinuses', emoji: '👃', specialty: 'Otolaryngology (ENT)',
     overview: 'Filters, warms, and humidifies over 20,000 breaths of air daily. Crucial for smell and resonance.',
     metrics: [{ value: '20K', label: 'Breaths/Day' }, { value: '10K', label: 'Scents' }, { value: '4', label: 'Sinus Pairs' }],
     doctors: [
@@ -278,7 +278,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Sinusitis', color: '#0891b2' }, { name: 'Deviated Septum', color: '#06b6d4' }, { name: 'Allergies', color: '#22d3ee' }]
   },
   mouth: {
-    name: 'Mouth & Jaw', emoji: 'ðŸ‘„', specialty: 'Dentistry & OMS',
+    name: 'Mouth & Jaw', emoji: '👄', specialty: 'Dentistry & OMS',
     overview: 'The beginning of the digestive tract, essential for speech, chewing, and initial chemical digestion.',
     metrics: [{ value: '32', label: 'Teeth' }, { value: '10K', label: 'Taste Buds' }, { value: 'Strong', label: 'Jaw Muscle' }],
     doctors: [
@@ -288,7 +288,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'TMJ', color: '#f59e0b' }, { name: 'Cavities', color: '#fbbf24' }, { name: 'Gingivitis', color: '#fcd34d' }]
   },
   ears: {
-    name: 'Ears & Hearing', emoji: 'ðŸ‘‚', specialty: 'Audiology & ENT',
+    name: 'Ears & Hearing', emoji: '👂', specialty: 'Audiology & ENT',
     overview: 'Responsible for hearing and maintaining bodily balance. Contains the smallest bones in the human body.',
     metrics: [{ value: '3', label: 'Ossicles' }, { value: '20-20k Hz', label: 'Range' }, { value: 'Vital', label: 'Balance' }],
     doctors: [
@@ -298,7 +298,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'Tinnitus', color: '#8b5cf6' }, { name: 'Ear Infection', color: '#a78bfa' }, { name: 'Vertigo', color: '#7c3aed' }]
   },
   neck: {
-    name: 'Neck & Thyroid', emoji: 'ðŸ—£ï¸', specialty: 'Endocrinology',
+    name: 'Neck & Thyroid', emoji: '🗣️', specialty: 'Endocrinology',
     overview: 'Supports the head and houses the thyroid gland, which controls metabolism, heart rate, and temperature.',
     metrics: [{ value: '7', label: 'Vertebrae' }, { value: 'Vital', label: 'Hormones' }, { value: 'Core', label: 'Metabolism' }],
     doctors: [
@@ -316,7 +316,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'IBS', color: '#fb923c' }, { name: "Crohn's", color: '#f97316' }, { name: 'Celiac', color: '#fdba74' }]
   },
   skin: {
-    name: 'Skin', emoji: 'âœ‹', specialty: 'Dermatology',
+    name: 'Skin', emoji: '✋', specialty: 'Dermatology',
     overview: 'The largest organ, protecting the body from microbes, regulating temperature, and permitting sensations.',
     metrics: [{ value: '20 sq.ft', label: 'Area' }, { value: '15%', label: 'Body Weight' }, { value: '3', label: 'Layers' }],
     doctors: [
@@ -334,7 +334,7 @@ const ORGAN_DATA = {
     conditions: [{ name: 'DVT', color: '#ef4444' }, { name: 'Varicose Veins', color: '#dc2626' }]
   },
   nerves: {
-    name: 'Nervous System', emoji: 'âš¡', specialty: 'Neurology',
+    name: 'Nervous System', emoji: '⚡', specialty: 'Neurology',
     overview: 'The body\'s electrical wiring, transmitting signals between the brain and the rest of the body at up to 268 mph.',
     metrics: [{ value: '268 mph', label: 'Signal Speed' }, { value: '43 Pairs', label: 'Major Nerves' }],
     doctors: [
@@ -347,7 +347,7 @@ const ORGAN_DATA = {
 /* Regions for navigation */
 const REGIONS = {
   head: { name: 'Head & Brain', emoji: '🧠', organs: ['brain', 'eyes', 'ears', 'nose', 'mouth', 'neck'], color: '#a78bfa' },
-  chest: { name: 'Chest & Thorax', emoji: '🫁', organs: ['heart', 'lungs', 'breasts', 'chest_muscles', 'vascular'], color: '#f87171' },
+  chest: { name: 'Chest & Thorax', emoji: '🫁', organs: ['heart', 'lungs', 'breasts', 'chest_muscles', 'vascular'], color: '#f87171' },
   abdomen: { name: 'Abdomen & Core', emoji: '🔸', organs: ['stomach', 'intestines', 'liver', 'spine'], color: '#fb923c' },
   pelvis: { name: 'Pelvis Area', emoji: '🩻', organs: ['female_pelvis', 'male_pelvis', 'kidneys'], color: '#c084fc' },
   arms: { name: 'Arms & Hands', emoji: '💪', organs: ['shoulders', 'skin'], color: '#fbbf24' },
@@ -471,7 +471,7 @@ const LoadingFallback = () => (
       <div style={{ color: '#94a3b8', fontSize: '0.85rem', fontWeight: 600, fontFamily: 'Outfit, sans-serif' }}>
         Loading Anatomy Model...
       </div>
-      <div style={{ color: '#334155', fontSize: '0.65rem' }}>7.8 MB Â· Z-Anatomy Dataset</div>
+      <div style={{ color: '#334155', fontSize: '0.65rem' }}>7.8 MB · Z-Anatomy Dataset</div>
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
     </div>
   </Html>
@@ -481,7 +481,7 @@ const LoadingFallback = () => (
 const AnatomyModel = React.memo(({ viewLevel, selectedRegion, selectedOrgan, hoveredMesh, setHoveredMesh, setHoverPos, onMeshClick }) => {
   const { gltf, error } = useDracoGLTF(MODEL_URL);
   const modelRef = useRef();
-  const meshMapRef = useRef(new Map()); // meshName â†’ { mesh, region, originalMaterial }
+  const meshMapRef = useRef(new Map()); // meshName → { mesh, region, originalMaterial }
 
   // Process the model once it loads
   useEffect(() => {
@@ -704,7 +704,7 @@ const DetailPanel = React.memo(({ organId, onClose, onNavigate }) => {
           <div className="bi-panel-specialty">{data.specialty}</div>
           <p className="bi-panel-overview">{data.overview}</p>
         </div>
-        <button className="bi-close-btn" onClick={onClose}>âœ•</button>
+        <button className="bi-close-btn" onClick={onClose}>✕</button>
       </div>
 
       {loadingAi ? (
@@ -743,7 +743,7 @@ const DetailPanel = React.memo(({ organId, onClose, onNavigate }) => {
 
       <div className="bi-quick-actions">
         <button className="bi-quick-btn primary" onClick={() => onNavigate('/appointments')}>📅… Book Appointment</button>
-        <button className="bi-quick-btn secondary" onClick={() => alert('ðŸ©º Report coming soon!')}>📅‹ Report</button>
+        <button className="bi-quick-btn secondary" onClick={() => alert('🩺 Report coming soon!')}>📅‹ Report</button>
       </div>
 
       <div className="bi-section-title">Top Specialists</div>
@@ -755,7 +755,7 @@ const DetailPanel = React.memo(({ organId, onClose, onNavigate }) => {
               <div className="bi-doctor-name">{doc.name}</div>
               <div className="bi-doctor-spec">{doc.spec}</div>
               <div className="bi-doctor-rating">
-                {[...Array(5)].map((_, s) => <span key={s} className="bi-star" style={{ opacity: s < Math.floor(doc.rating) ? 1 : 0.3 }}>â˜…</span>)}
+                {[...Array(5)].map((_, s) => <span key={s} className="bi-star" style={{ opacity: s < Math.floor(doc.rating) ? 1 : 0.3 }}>★</span>)}
                 <span className="bi-rating-num">{doc.rating}</span>
               </div>
             </div>
@@ -893,7 +893,7 @@ const BodyInsights = () => {
           </button>
           <div className="bi-title-group">
             <h1>Body Insights</h1>
-            <p>Real 3D anatomy Â· Z-Anatomy dataset Â· Click to explore</p>
+            <p>Real 3D anatomy · Z-Anatomy dataset · Click to explore</p>
           </div>
         </div>
 
@@ -901,7 +901,7 @@ const BodyInsights = () => {
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
           <div className="bi-breadcrumb">
             <button className={`bi-crumb ${viewLevel === 'body' ? 'active' : ''}`} onClick={goToBody}>
-              ðŸ  Full Body
+              🏠 Full Body
             </button>
             {selectedRegion && REGIONS[selectedRegion] && (
               <>
@@ -1035,7 +1035,7 @@ const BodyInsights = () => {
                           <div className="bi-organ-spec">{o.specialty}</div>
                           <div className="bi-organ-doc-count">{o.doctors.length} specialists available</div>
                         </div>
-                        <span className="bi-organ-arrow">â†’</span>
+                        <span className="bi-organ-arrow">→</span>
                       </motion.button>
                     );
                   })}

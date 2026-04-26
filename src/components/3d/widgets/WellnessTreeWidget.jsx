@@ -39,7 +39,7 @@ export default function WellnessTreeWidget({ healthScore = 75, className = '' })
       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/90 to-transparent">
         <div className="flex items-center justify-between">
           <div>
-            <h4 className="text-white font-bold text-sm">ðŸŒ³ Wellness Tree</h4>
+            <h4 className="text-white font-bold text-sm">🌳 Wellness Tree</h4>
             <p className="text-gray-400 text-xs mt-0.5">
               {healthScore >= 75 ? 'Flourishing!' : healthScore >= 50 ? 'Growing steadily' : 'Needs attention'}
             </p>

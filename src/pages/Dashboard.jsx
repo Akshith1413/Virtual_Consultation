@@ -100,7 +100,7 @@ const GlassCard = ({ children, className = '', delay = 0, onClick, hoverGlow = t
     </motion.div>
 );
 
-// Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ BMI Gauge Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// ─── BMI Gauge ───────────────────────────────────────────────────
 const BMIGauge = ({ bmi }) => {
     const getBMIColor = (val) => {
         if (val < 18.5) return '#60a5fa';
@@ -680,7 +680,7 @@ const Dashboard = () => {
                                         transition={{ duration: 2, repeat: Infinity }}
                                         className="text-3xl flex-shrink-0"
                                     >
-                                        {activeReminder.type === 'weight' ? 'âš–ï¸' : activeReminder.type === 'water' ? 'ðŸ’§' : activeReminder.type === 'sleep' ? 'ðŸŒ™' : 'ðŸ˜Š'}
+                                        {activeReminder.type === 'weight' ? '⚖️' : activeReminder.type === 'water' ? '💧' : activeReminder.type === 'sleep' ? '🌙' : '😊'}
                                     </motion.div>
                                     <div className="flex-1">
                                         <p className="text-sm font-bold text-gray-800 dark:text-white">{activeReminder.message}</p>
@@ -714,7 +714,7 @@ const Dashboard = () => {
                         )}
                     </AnimatePresence>
 
-                    {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Quick Actions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+                    {/* ──────────────── Quick Actions ──────────────── */}
                     <GlassCard className="p-6 mb-8" delay={0.1} hoverGlow={false}>
                         <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-5">Quick Actions</h2>
                         <div className="flex flex-wrap justify-center sm:justify-start gap-6 sm:gap-8">
@@ -724,7 +724,7 @@ const Dashboard = () => {
                         </div>
                     </GlassCard>
 
-                    {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Meal Status + Hydration Timer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+                    {/* ──────────────── Meal Status + Hydration Timer ────────────── */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
                         <GlassCard className="p-5 flex flex-col justify-between" delay={0.11} hoverGlow={false}>
                             <div>
@@ -963,7 +963,7 @@ const Dashboard = () => {
                                     </div>
                                 </div>
                                 <div className="flex-1">
-                                    <p className="text-sm font-bold text-gray-800 dark:text-white">{healthScore >= 75 ? 'Excellent! ðŸŒŸ' : healthScore >= 50 ? 'Good progress' : 'Keep going! '}</p>
+                                    <p className="text-sm font-bold text-gray-800 dark:text-white">{healthScore >= 75 ? 'Excellent! 🌟' : healthScore >= 50 ? 'Good progress' : 'Keep going! '}</p>
                                     <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Based on BMI, hydration, supplements & activity</p>
                                 </div>
                             </div>
@@ -1217,7 +1217,7 @@ const Dashboard = () => {
                                                 <p className="text-sm font-medium text-gray-800 dark:text-gray-200 truncate">
                                                     {sup.customSupplement?.name || sup.supplementId?.name || 'Supplement'}
                                                 </p>
-                                                <p className="text-xs text-gray-400 dark:text-gray-500">{sup.frequency} Â· {sup.dosage}{sup.customSupplement?.dosageUnit || 'mg'}</p>
+                                                <p className="text-xs text-gray-400 dark:text-gray-500">{sup.frequency} · {sup.dosage}{sup.customSupplement?.dosageUnit || 'mg'}</p>
                                             </div>
                                             <span className="text-xs px-2 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 font-medium">
                                                 Active
