@@ -889,7 +889,7 @@ const BodyInsights = () => {
       <header className="bi-header">
         <div className="bi-header-left">
           <button className="bi-back-btn" onClick={() => viewLevel === 'body' ? navigate('/portal') : viewLevel === 'region' ? goToBody() : goToRegion()}>
-            â†
+            ←
           </button>
           <div className="bi-title-group">
             <h1>Body Insights</h1>
@@ -923,10 +923,10 @@ const BodyInsights = () => {
 
           <div className="bi-gender-toggle">
             <button className={`bi-gender-btn ${gender === 'female' ? 'active' : ''}`} onClick={() => { setGender('female'); goToBody(); }}>
-              â™€ Female
+              ♀ Female
             </button>
             <button className={`bi-gender-btn ${gender === 'male' ? 'active' : ''}`} onClick={() => { setGender('male'); goToBody(); }}>
-              â™‚ Male
+              ♂ Male
             </button>
           </div>
         </div>
@@ -995,7 +995,7 @@ const BodyInsights = () => {
               onPointerOver={(e) => e.currentTarget.style.background = 'rgba(56,189,248,0.1)'}
               onPointerOut={(e) => e.currentTarget.style.background = 'rgba(5,8,16,0.6)'}
             >
-              <span style={{ fontSize: '0.8rem', marginTop: '2px' }}>â†º</span>
+              <span style={{ fontSize: '0.8rem', marginTop: '2px' }}>↺</span>
             </button>
           </div>
         </div>

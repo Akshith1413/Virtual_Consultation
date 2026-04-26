@@ -736,7 +736,7 @@ const Dashboard = () => {
                                         return (
                                             <div key={meal} className="flex flex-col items-center gap-1">
                                                 <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-inner ${logged || detailedMeal ? (logged?.skipped ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-500' : 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-500') : 'bg-gray-100 dark:bg-slate-700 text-gray-400'}`}>
-                                                    {logged || detailedMeal ? (logged?.skipped ? 'âŒš' : '✅') : 'âŒ›'}
+                                                    {logged || detailedMeal ? (logged?.skipped ? '⌚' : '✅') : '⌛'}
                                                 </div>
                                                 <span className="text-[10px] font-bold text-gray-400 capitalize">{meal}</span>
                                             </div>
