@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 
 const UpdateProfileModal = ({ currentUsername, currentEmail, onClose, onSubmit }) => {
   const [username, setUsername] = useState(currentUsername);
@@ -62,16 +62,3 @@ const UpdateProfileModal = ({ currentUsername, currentEmail, onClose, onSubmit }
 };
 
 export default UpdateProfileModal;
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity

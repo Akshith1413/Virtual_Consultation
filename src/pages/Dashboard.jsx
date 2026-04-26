@@ -100,7 +100,7 @@ const GlassCard = ({ children, className = '', delay = 0, onClick, hoverGlow = t
     </motion.div>
 );
 
-// â”€â”€â”€ BMI Gauge â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ BMI Gauge Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 const BMIGauge = ({ bmi }) => {
     const getBMIColor = (val) => {
         if (val < 18.5) return '#60a5fa';
@@ -680,7 +680,7 @@ const Dashboard = () => {
                                         transition={{ duration: 2, repeat: Infinity }}
                                         className="text-3xl flex-shrink-0"
                                     >
-                                        {activeReminder.type === 'weight' ? '⚖️' : activeReminder.type === 'water' ? '💧' : activeReminder.type === 'sleep' ? '🌙' : '😊'}
+                                        {activeReminder.type === 'weight' ? 'âš–ï¸' : activeReminder.type === 'water' ? 'ðŸ’§' : activeReminder.type === 'sleep' ? 'ðŸŒ™' : 'ðŸ˜Š'}
                                     </motion.div>
                                     <div className="flex-1">
                                         <p className="text-sm font-bold text-gray-800 dark:text-white">{activeReminder.message}</p>
@@ -714,7 +714,7 @@ const Dashboard = () => {
                         )}
                     </AnimatePresence>
 
-                    {/* ──────────────── Quick Actions ──────────────── */}
+                    {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Quick Actions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
                     <GlassCard className="p-6 mb-8" delay={0.1} hoverGlow={false}>
                         <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-5">Quick Actions</h2>
                         <div className="flex flex-wrap justify-center sm:justify-start gap-6 sm:gap-8">
@@ -724,7 +724,7 @@ const Dashboard = () => {
                         </div>
                     </GlassCard>
 
-                    {/* ──────────────── Meal Status + Hydration Timer ────────────── */}
+                    {/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Meal Status + Hydration Timer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
                         <GlassCard className="p-5 flex flex-col justify-between" delay={0.11} hoverGlow={false}>
                             <div>
@@ -736,7 +736,7 @@ const Dashboard = () => {
                                         return (
                                             <div key={meal} className="flex flex-col items-center gap-1">
                                                 <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-inner ${logged || detailedMeal ? (logged?.skipped ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-500' : 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-500') : 'bg-gray-100 dark:bg-slate-700 text-gray-400'}`}>
-                                                    {logged || detailedMeal ? (logged?.skipped ? '⌚' : '✅') : '⌛'}
+                                                    {logged || detailedMeal ? (logged?.skipped ? 'âŒš' : 'âœ…') : 'âŒ›'}
                                                 </div>
                                                 <span className="text-[10px] font-bold text-gray-400 capitalize">{meal}</span>
                                             </div>
@@ -963,7 +963,7 @@ const Dashboard = () => {
                                     </div>
                                 </div>
                                 <div className="flex-1">
-                                    <p className="text-sm font-bold text-gray-800 dark:text-white">{healthScore >= 75 ? 'Excellent! 🌟' : healthScore >= 50 ? 'Good progress' : 'Keep going! '}</p>
+                                    <p className="text-sm font-bold text-gray-800 dark:text-white">{healthScore >= 75 ? 'Excellent! ðŸŒŸ' : healthScore >= 50 ? 'Good progress' : 'Keep going! '}</p>
                                     <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Based on BMI, hydration, supplements & activity</p>
                                 </div>
                             </div>
@@ -1018,7 +1018,7 @@ const Dashboard = () => {
                                 <div>
                                     <p className="text-xs text-gray-500 dark:text-gray-400">BMI</p>
                                     <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                                        {healthProfile?.bmi ? <AnimatedCounter value={healthProfile.bmi} decimals={1} /> : '—'}
+                                        {healthProfile?.bmi ? <AnimatedCounter value={healthProfile.bmi} decimals={1} /> : 'â€”'}
                                     </p>
                                 </div>
                             </div>
@@ -1046,7 +1046,7 @@ const Dashboard = () => {
                                 <div>
                                     <p className="text-xs text-gray-500 dark:text-gray-400">Weight</p>
                                     <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                                        {healthProfile?.weight ? <><AnimatedCounter value={healthProfile.weight} decimals={1} /><span className="text-sm font-normal text-gray-400 ml-1">kg</span></> : '—'}
+                                        {healthProfile?.weight ? <><AnimatedCounter value={healthProfile.weight} decimals={1} /><span className="text-sm font-normal text-gray-400 ml-1">kg</span></> : 'â€”'}
                                     </p>
                                 </div>
                             </div>
@@ -1066,7 +1066,7 @@ const Dashboard = () => {
                                 <div>
                                     <p className="text-xs text-gray-500 dark:text-gray-400">Height</p>
                                     <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                                        {healthProfile?.height ? <><AnimatedCounter value={healthProfile.height} decimals={0} /><span className="text-sm font-normal text-gray-400 ml-1">cm</span></> : '—'}
+                                        {healthProfile?.height ? <><AnimatedCounter value={healthProfile.height} decimals={0} /><span className="text-sm font-normal text-gray-400 ml-1">cm</span></> : 'â€”'}
                                     </p>
                                 </div>
                             </div>
@@ -1217,7 +1217,7 @@ const Dashboard = () => {
                                                 <p className="text-sm font-medium text-gray-800 dark:text-gray-200 truncate">
                                                     {sup.customSupplement?.name || sup.supplementId?.name || 'Supplement'}
                                                 </p>
-                                                <p className="text-xs text-gray-400 dark:text-gray-500">{sup.frequency} · {sup.dosage}{sup.customSupplement?.dosageUnit || 'mg'}</p>
+                                                <p className="text-xs text-gray-400 dark:text-gray-500">{sup.frequency} Â· {sup.dosage}{sup.customSupplement?.dosageUnit || 'mg'}</p>
                                             </div>
                                             <span className="text-xs px-2 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 font-medium">
                                                 Active
@@ -1377,17 +1377,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity

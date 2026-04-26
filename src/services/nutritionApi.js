@@ -17,14 +17,14 @@ const CURRENT_LOG_LEVEL = DEBUG_MODE ? LOG_LEVELS.DEBUG : LOG_LEVELS.ERROR;
 
 // Validate required environment variables
 if (!USDA_API_KEY) {
-  console.error('❌ USDA_API_KEY is required. Please check your environment variables.');
+  console.error('âŒ USDA_API_KEY is required. Please check your environment variables.');
   if (DEBUG_MODE) {
     console.warn('Running without USDA API key - food search will not work');
   }
 }
 
 if (!API_BASE_URL) {
-  console.error('❌ API_BASE_URL is required. Please check your environment variables.');
+  console.error('âŒ API_BASE_URL is required. Please check your environment variables.');
 }
 
 // Logger utility
@@ -952,7 +952,7 @@ export const apiHealthMonitor = {
 export const apiDebug = {
   // Test nutritional goals endpoint
   testNutritionalGoals: async () => {
-    console.group('🔧 Nutritional Goals API Test');
+    console.group('ðŸ”§ Nutritional Goals API Test');
     try {
       const token = TokenManager.getToken();
       console.log('Token available:', !!token);
@@ -970,13 +970,13 @@ export const apiDebug = {
   // Clear all caches
   clearCache: () => {
     apiCache.clear();
-    console.log('🗑️ API cache cleared');
+    console.log('ðŸ—‘ï¸ API cache cleared');
   },
 
   // Check token status
   checkToken: () => {
     const payload = TokenManager.getTokenPayload();
-    console.log('🔐 Token Status:', {
+    console.log('ðŸ” Token Status:', {
       exists: !!TokenManager.getToken(),
       valid: TokenManager.validateToken(),
       payload: payload,
@@ -1017,11 +1017,4 @@ export const handleAuthError = () => {
   window.location.hash = '#/signin';
 };
 
-export default api; 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity
+export default api;

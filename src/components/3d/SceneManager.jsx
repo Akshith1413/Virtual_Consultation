@@ -74,12 +74,3 @@ export const ISLAND_CONFIGS = [
     lookAt: [0, -3, -80],
   },
 ];
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity

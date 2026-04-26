@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {
   BrainCircuit,
   MessageSquareText,
@@ -68,7 +68,3 @@ const AIHealthAssistantSection = () => {
 };
 
 export default AIHealthAssistantSection;
- 
- 
-
-// minor tweak for clarity

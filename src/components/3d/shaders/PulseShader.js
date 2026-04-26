@@ -1,4 +1,4 @@
-﻿// Heartbeat-style pulse glow shader
+// Heartbeat-style pulse glow shader
 export const PulseShaderMaterial = {
   uniforms: {
     uTime: { value: 0 },
@@ -173,13 +173,3 @@ export const AuroraShaderMaterial = {
     }
   `
 };
- 
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity

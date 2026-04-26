@@ -1,4 +1,4 @@
-﻿import React, { useRef } from 'react';
+import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { EffectComposer, Bloom, Vignette, ChromaticAberration } from '@react-three/postprocessing';
@@ -38,7 +38,3 @@ export default function PostProcessingEffects({
     </EffectComposer>
   );
 }
- 
-
-
-// minor tweak for clarity

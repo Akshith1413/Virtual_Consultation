@@ -159,8 +159,3 @@ export default function DNAHelix({
     </group>
   );
 }
- 
- 
- 
-
-// minor tweak for clarity

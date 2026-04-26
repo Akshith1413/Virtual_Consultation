@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 
 const TESTIMONIALS = [
   {
@@ -111,13 +111,3 @@ export default function TestimonialsSection() {
     </section>
   );
 }
- 
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity

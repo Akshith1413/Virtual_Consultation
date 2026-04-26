@@ -1,4 +1,4 @@
-﻿/**
+/**
  * AI Service â€” Frontend API wrapper for all AI endpoints
  */
 import axios from 'axios';
@@ -132,10 +132,3 @@ export async function getAIStatus() {
 export function clearAICache() {
   cache.clear();
 }
- 
- 
- 
- 
-
-// minor tweak for clarity
-

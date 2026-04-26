@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, createContext, useContext, useMemo } from 'react';
+import React, { useState, useEffect, createContext, useContext, useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell, Area, AreaChart, Legend } from 'recharts';
 import {
   Plus, Search, Filter, Calendar, Clock, AlertTriangle, TrendingUp, DollarSign,
@@ -3015,12 +3015,3 @@ const AppWithTheme = () => (
 );
 
 export default AppWithTheme;
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity

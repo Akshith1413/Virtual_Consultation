@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -209,11 +209,3 @@ const Profile = () => {
 };
 
 export default Profile;
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity

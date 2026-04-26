@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Navigate } from 'react-router-dom';
 import Landing3D from './Landing3D';
@@ -16,13 +16,4 @@ const Home = () => {
   return <Landing3D />;
 };
 
-export default Home; 
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
+export default Home;

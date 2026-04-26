@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Briefcase, Clock, Coffee, BarChart3, HeartPulse } from "lucide-react";
 
 export default function PersonaWorkingAdults() {
@@ -86,20 +86,3 @@ export default function PersonaWorkingAdults() {
     </section>
   );
 }
- 
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-

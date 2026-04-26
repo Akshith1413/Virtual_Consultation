@@ -67,17 +67,3 @@ export default function GazeSelector({ onGaze, dwellTime = 1.5 }) {
     </mesh>
   );
 }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity

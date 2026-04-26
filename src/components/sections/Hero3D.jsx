@@ -118,21 +118,4 @@ export default function Hero3D() {
       </Html>
     </>
   );
-} 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity
+}

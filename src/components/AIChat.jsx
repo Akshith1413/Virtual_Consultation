@@ -1,4 +1,4 @@
-﻿import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 import { sendChatMessage } from '../services/aiService';
 import '../styles/AIChat.css';
@@ -247,14 +247,3 @@ export default function AIChat() {
     </>
   );
 }
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity

@@ -1,4 +1,4 @@
-﻿import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Html, Float } from '@react-three/drei';
@@ -306,9 +306,3 @@ export default function CTAIsland({ position = [0, 0, 0], onNavigate, isActive }
     </group>
   );
 }
- 
- 
- 
- 
-
-// minor tweak for clarity

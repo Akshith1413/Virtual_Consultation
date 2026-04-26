@@ -58,7 +58,7 @@ export default function VideoCallRoom() {
           >
             <div className="precall-card">
               <div style={{ width: 140, height: 140, margin: '0 auto 24px', borderRadius: '50%', background: '#1e293b', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                {isVideoOff ? <VideoOff size={40} color="#64748b" /> : <div style={{ fontSize: 60 }}>👤</div>}
+                {isVideoOff ? <VideoOff size={40} color="#64748b" /> : <div style={{ fontSize: 60 }}>ðŸ‘¤</div>}
                 {!isVideoOff && <div className="camera-scanner" />}
               </div>
               <h2 style={{ fontFamily: "'Outfit', sans-serif", margin: '0 0 8px', fontSize: 28, color: '#f8fafc' }}>Ready to join?</h2>
@@ -113,7 +113,7 @@ export default function VideoCallRoom() {
                   <div className="call-pulse-ring" />
                   <div className="call-pulse-ring" />
                   <div className="call-pulse-ring" />
-                  <div className="call-avatar">👩‍⚕️</div>
+                  <div className="call-avatar">ðŸ‘©â€âš•ï¸</div>
                 </div>
                 <h2 className="call-doctor-name" style={{ marginTop: 40 }}>{doctorName}</h2>
                 <div className="call-status" style={{ marginTop: 16 }}>Connecting...</div>
@@ -131,7 +131,7 @@ export default function VideoCallRoom() {
           >
             <div className="video-main">
               {/* Main Video (Doctor) */}
-              <div style={{ fontSize: 160, filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.5))' }}>👩‍⚕️</div>
+              <div style={{ fontSize: 160, filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.5))' }}>ðŸ‘©â€âš•ï¸</div>
             </div>
 
             <motion.div 
@@ -161,7 +161,7 @@ export default function VideoCallRoom() {
               transition={{ delay: 0.4, type: 'spring' }}
               className="video-self-preview"
             >
-              {isVideoOff ? <VideoOff size={40} color="#64748b" /> : '👤'}
+              {isVideoOff ? <VideoOff size={40} color="#64748b" /> : 'ðŸ‘¤'}
             </motion.div>
 
             <motion.div 
@@ -191,15 +191,3 @@ export default function VideoCallRoom() {
     </div>
   );
 }
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity

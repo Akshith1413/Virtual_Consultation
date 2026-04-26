@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import { Html, Float } from '@react-three/drei';
 
 /**
- * WellnessTree3D — Complete rewrite with recursive branching algorithm.
+ * WellnessTree3D â€” Complete rewrite with recursive branching algorithm.
  * Tree size/health reflects the user's overall health score.
  * Branches for different health aspects, fruits for metric completion.
  */
@@ -20,7 +20,7 @@ function Branch({ start, length, angle, angleZ, depth, maxDepth, healthScore }) 
   // Branch color: brown for trunk, green transitioning for higher branches
   const color = depth < 2 ? '#8b4513' : depth < 3 ? '#6b8e23' : '#228b22';
 
-  // Scaling factor based on health score (0–100)
+  // Scaling factor based on health score (0â€“100)
   const scaleFactor = 0.5 + (healthScore / 100) * 0.5;
 
   // Generate child branches
@@ -158,11 +158,4 @@ export default function WellnessTree3D({ healthScore = 75, healthMetrics = [], o
       />
     </group>
   );
-} 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
+}

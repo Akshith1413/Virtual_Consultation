@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 
 const ChangePasswordModal = ({ onClose, onSubmit }) => {
   const [currentPassword, setCurrentPassword] = useState('');
@@ -82,12 +82,3 @@ const ChangePasswordModal = ({ onClose, onSubmit }) => {
 };
 
 export default ChangePasswordModal;
- 
- 
- 
- 
- 
- 
-
-
-// minor tweak for clarity

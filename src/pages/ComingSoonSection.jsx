@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import {
   Mic,
   Activity,
@@ -119,13 +119,3 @@ export default function ComingSoonSection() {
     </section>
   );
 }
- 
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity

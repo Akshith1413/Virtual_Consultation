@@ -11,11 +11,11 @@ const DUMMY_HISTORY = [
   { id: 1, type: 'video', doctor: 'Dr. Sarah Mitchell', specialty: 'General Practice', date: '2026-04-21', time: '10:30 AM', duration: '18 min', status: 'completed', direction: 'outgoing' },
   { id: 2, type: 'call', doctor: 'Dr. Raj Patel', specialty: 'Cardiology', date: '2026-04-21', time: '2:15 PM', duration: '12 min', status: 'completed', direction: 'incoming' },
   { id: 3, type: 'chat', doctor: 'Dr. Sarah Mitchell', specialty: 'General Practice', date: '2026-04-20', time: '9:00 AM', duration: '25 messages', status: 'completed', direction: 'outgoing' },
-  { id: 4, type: 'call', doctor: 'Dr. Emily Chen', specialty: 'Dermatology', date: '2026-04-20', time: '4:45 PM', duration: '—', status: 'missed', direction: 'incoming' },
+  { id: 4, type: 'call', doctor: 'Dr. Emily Chen', specialty: 'Dermatology', date: '2026-04-20', time: '4:45 PM', duration: 'â€”', status: 'missed', direction: 'incoming' },
   { id: 5, type: 'video', doctor: 'Dr. James Wilson', specialty: 'Orthopedics', date: '2026-04-19', time: '11:00 AM', duration: '22 min', status: 'completed', direction: 'outgoing' },
   { id: 6, type: 'chat', doctor: 'Dr. Raj Patel', specialty: 'Cardiology', date: '2026-04-19', time: '3:30 PM', duration: '14 messages', status: 'completed', direction: 'outgoing' },
   { id: 7, type: 'call', doctor: 'Dr. Sarah Mitchell', specialty: 'General Practice', date: '2026-04-18', time: '10:00 AM', duration: '8 min', status: 'completed', direction: 'outgoing' },
-  { id: 8, type: 'video', doctor: 'Dr. Emily Chen', specialty: 'Dermatology', date: '2026-04-18', time: '1:00 PM', duration: '—', status: 'missed', direction: 'incoming' },
+  { id: 8, type: 'video', doctor: 'Dr. Emily Chen', specialty: 'Dermatology', date: '2026-04-18', time: '1:00 PM', duration: 'â€”', status: 'missed', direction: 'incoming' },
   { id: 9, type: 'chat', doctor: 'Dr. James Wilson', specialty: 'Orthopedics', date: '2026-04-17', time: '5:00 PM', duration: '8 messages', status: 'completed', direction: 'outgoing' },
   { id: 10, type: 'call', doctor: 'Dr. Raj Patel', specialty: 'Cardiology', date: '2026-04-16', time: '9:30 AM', duration: '15 min', status: 'completed', direction: 'incoming' },
 ];
@@ -284,10 +284,3 @@ function formatDateLabel(dateStr) {
   if (date.toDateString() === yesterday.toDateString()) return 'Yesterday';
   return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity

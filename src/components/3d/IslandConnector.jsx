@@ -81,17 +81,3 @@ export default function IslandConnector({ from = [0, 0, 0], to = [0, 0, 0], colo
     </group>
   );
 }
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity

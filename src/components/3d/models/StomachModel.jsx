@@ -1,4 +1,4 @@
-﻿import React, { useRef, useMemo, useState } from 'react';
+import React, { useRef, useMemo, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Html } from '@react-three/drei';
@@ -173,17 +173,3 @@ export default function StomachModel({
     </group>
   );
 }
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-
-// minor tweak for clarity
-
-// minor tweak for clarity

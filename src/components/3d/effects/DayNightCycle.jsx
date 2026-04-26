@@ -66,16 +66,3 @@ export default function DayNightCycle() {
     </>
   );
 }
- 
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity

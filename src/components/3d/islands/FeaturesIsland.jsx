@@ -1,4 +1,4 @@
-﻿import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Html, Float } from '@react-three/drei';
@@ -187,12 +187,3 @@ export default function FeaturesIsland({ position = [0, 0, 0], onFeatureSelect, 
     </group>
   );
 }
- 
- 
- 
- 
- 
- 
-
-// minor tweak for clarity
-

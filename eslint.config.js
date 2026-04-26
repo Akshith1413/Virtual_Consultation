@@ -27,8 +27,3 @@ export default defineConfig([
     },
   },
 ])
- 
- 
- 
-
-// minor tweak for clarity

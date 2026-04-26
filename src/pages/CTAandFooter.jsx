@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Heart, ArrowRight } from "lucide-react";
 
 export default function CTAandFooter() {
@@ -144,9 +144,3 @@ export default function CTAandFooter() {
     </>
   );
 }
- 
- 
- 
-
-
-// minor tweak for clarity

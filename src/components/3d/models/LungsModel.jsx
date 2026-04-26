@@ -12,7 +12,7 @@ function createLungGeometry(mirror = false) {
   const points = [];
   const segments = 20;
   
-  // Lung profile curve — organic lobe shape
+  // Lung profile curve â€” organic lobe shape
   for (let i = 0; i <= segments; i++) {
     const t = i / segments;
     const y = t * 2.0 - 1.0; // -1 to 1
@@ -199,7 +199,7 @@ export default function LungsModel({
               className="bg-slate-900/90 backdrop-blur-xl rounded-2xl p-4 border border-blue-500/30 shadow-2xl shadow-blue-500/20 min-w-[200px]"
               style={{ pointerEvents: 'none' }}
             >
-              <h4 className="text-blue-400 font-bold text-sm mb-2">🫁 Respiratory</h4>
+              <h4 className="text-blue-400 font-bold text-sm mb-2">ðŸ« Respiratory</h4>
               {Object.entries(healthData).map(([key, value]) => (
                 <div key={key} className="flex justify-between text-xs py-1 border-b border-slate-700/50 last:border-0">
                   <span className="text-gray-400 capitalize">{key}</span>
@@ -213,7 +213,3 @@ export default function LungsModel({
     </group>
   );
 }
- 
- 
-
-// minor tweak for clarity

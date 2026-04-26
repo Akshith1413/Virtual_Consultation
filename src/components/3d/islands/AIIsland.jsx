@@ -329,13 +329,3 @@ export default function AIIsland({ position = [0, 0, 0], isActive }) {
     </group>
   );
 }
- 
- 
- 
- 
-
-// minor tweak for clarity
-
-// minor tweak for clarity
-
-// minor tweak for clarity
